@@ -1,10 +1,10 @@
 {
   "name": "react-bootstrap",
   "version": "1.0.0",
-  "private": false,
-  "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap",
+  "private": true,
+  "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap/",
   "description": "A project using React with Bootstrap for UI development",
-  "main": "index.js",
+
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -20,8 +20,6 @@
       "react-app/jest"
     ]
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",

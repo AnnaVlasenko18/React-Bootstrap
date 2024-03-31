@@ -1,8 +1,8 @@
 {
   "name": "react-bootstrap",
   "version": "1.0.0",
-  "private": true,
-  "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap/",
+  "private": false,
+  "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap",
   "description": "A project using React with Bootstrap for UI development",
   "main": "index.js",
   "scripts": {
@@ -39,14 +39,6 @@
       ">0.2%",
       "not dead",
       "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
   }
 }

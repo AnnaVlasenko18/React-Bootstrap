@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ThemeProvider } from 'react-bootstrap';
+import { BrowserRouter } from 'react-router-dom';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
-      <ThemeProvider  dir="rtl" breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
-      minBreakpoint="xxs" >
+  <React.StrictMode>
+    <BrowserRouter basename="/react-bootstrap">
+      <ThemeProvider>
         <App />
       </ThemeProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 )

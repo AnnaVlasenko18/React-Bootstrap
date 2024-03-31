@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_bootstrap=self.webpackChunkreact_bootstrap||[]).push([[610],{610:(e,t,s)=>{s.r(t),s.d(t,{default:()=>r});const a="HomePage_div__ivH-n",c="HomePage_title__UFLA3";var o=s(579);const r=function(){return(0,o.jsx)("div",{className:a,children:(0,o.jsx)("h1",{className:c,children:"Wellcome to Bootstrap!!!"})})}}}]);
+//# sourceMappingURL=610.4bf2a365.chunk.js.map

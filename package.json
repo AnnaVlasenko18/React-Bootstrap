@@ -1,7 +1,7 @@
 {
   "name": "react-bootstrap",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap/",
   "description": "A project using React with Bootstrap for UI development",
   "main": "index.js",

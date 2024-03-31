@@ -7,7 +7,7 @@ import Range from '../../components/Forms/Range/Range'
 import InputsGroup from '../../components/Forms/InputGroup/InputGroup'
 import FloatingLabels from '../../components/Forms/FloatingLabels/FloatingLabels'
 import Layout from '../../components/Forms/Layout/Layout'
-
+import Validation from '../../components/Forms/Validation/Validation'
 
 
 function FormsPage() {
@@ -23,6 +23,7 @@ function FormsPage() {
           <InputsGroup/>
           <FloatingLabels/>
           <Layout/>
+          <Validation/>
        </>
     );
   }

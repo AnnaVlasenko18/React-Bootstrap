@@ -1,7 +1,4 @@
-// import './App.css';
-
-// import Qverview from './components/Forms/Qverview/Qverview';
-// import FormControls from './components/Forms/FormControls/FormControls'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Route, Routes } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
@@ -39,9 +36,6 @@ const App = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
-        {/* <h1>Forms</h1>
-          <Qverview/>
-          <FormControls/> */}
       </>
 
     )

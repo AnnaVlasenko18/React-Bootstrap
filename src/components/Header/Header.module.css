@@ -1,5 +1,5 @@
 .header{
-    width: 100%;
+      width: 100%;
     background: #fff;
     height: 80px;
     display: flex;
@@ -24,7 +24,11 @@
   margin-right: 48px;
 }
 
-.navLink:active,
+.navLink:focus{
+    color: red;
+    text-decoration: underline;
+}
+
 .navLink:hover {
     color: red;
     text-decoration: underline;

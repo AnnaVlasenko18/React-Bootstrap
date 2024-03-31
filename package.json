@@ -2,7 +2,7 @@
   "name": "react-bootstrap",
   "version": "1.0.0",
   "private": false,
-  "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap",
+  "homepage": "https://AnnaVlasenko18.github.io/react-bootstrap/",
   "description": "A project using React with Bootstrap for UI development",
   "main": "index.js",
   "scripts": {
@@ -30,11 +30,6 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1"
   },
-  "development": [
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version"
-  ],
   "browserslist": {
     "production": [
       ">0.2%",

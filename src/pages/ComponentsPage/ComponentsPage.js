@@ -6,17 +6,16 @@ import ButtonsGroup from '../../components/Components/ButtonGroup/ButtonGroup'
 import Buttons from '../../components/Components/Buttons/Buttons'
 import Cards from '../../components/Components/Cards/Cards'
 import Carousels from '../../components/Components/Carousels/Carousels'
+import CloseButtons from '../../components/Components/CloseButton/CloseButton'
+import Dropdowns from '../../components/Components/Dropdowns/Dropdowns'
+import ImagesForm from '../../components/Components/Images/Images'
+import ListGroups from '../../components/Components/ListGroups/ListGroups.js'
+import ModalsForm from '../../components/Components/ModalsForm/ModalsForm.js'
+import Navbars from '../../components/Components/Navbars/Navbars.js'
+import NavsAndTabs from '../../components/Components/NavsAndTabs/NavsAndTabs.js'
 // import Alerts from '../../components/Components'
 // import Alerts from '../../components/Components'
 // import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-
 
 
 function ComponentsPage() {
@@ -31,6 +30,13 @@ function ComponentsPage() {
      <Buttons/>
      <Cards/>
      <Carousels/>
+     <CloseButtons/>
+     <Dropdowns/>
+     <ImagesForm/>
+     <ListGroups/>
+     <ModalsForm/>
+     <Navbars/>
+     <NavsAndTabs/>
      </>
     );
   }

@@ -82,12 +82,6 @@ function OffcanvasHidden() {
         </Offcanvas.Body>
       </Offcanvas>
     </>
-
-    <h3></h3>
-
-    <h3></h3>
-
-    <h3></h3>
     </>
   );
 }

@@ -14,8 +14,9 @@
  
 .nav {
     max-width: 1440px;
-    font-weight: 800;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.1em;
 }
 
 .navLink {
@@ -24,13 +25,18 @@
   margin-right: 48px;
 }
 
+.active {
+    color: rgb(43, 2, 158);
+    text-decoration: underline;
+}
+
 .navLink:focus{
-    color: red;
+    color: rgb(43, 2, 158);
     text-decoration: underline;
 }
 
 .navLink:hover {
-    color: red;
+    color: rgb(43, 2, 158);
     text-decoration: underline;
 }
 

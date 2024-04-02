@@ -1,6 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import { Dropdown, DropdownButton, SplitButton } from 'react-bootstrap';
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import DropdownButton from 'react-bootstrap/DropdownButton';
 // import SplitButton from 'react-bootstrap/SplitButton';
@@ -140,7 +141,7 @@ function InputsGroup() {
         <Button variant="outline-secondary">Button</Button>
       </InputGroup>
 
-      {/* <h3>Buttons with Dropdowns</h3>
+      <h3>Buttons with Dropdowns</h3>
       <InputGroup className="mb-3">
         <DropdownButton
           variant="outline-secondary"
@@ -198,9 +199,9 @@ function InputsGroup() {
           <Dropdown.Divider />
           <Dropdown.Item href="#">Separated link</Dropdown.Item>
         </DropdownButton>
-      </InputGroup> */}
+      </InputGroup>
 
-      {/* <h3>Segmented buttons</h3>
+      <h3>Segmented buttons</h3>
       <InputGroup className="mb-3">
         <SplitButton
           variant="outline-secondary"
@@ -230,7 +231,7 @@ function InputsGroup() {
           <Dropdown.Divider />
           <Dropdown.Item href="#">Separated link</Dropdown.Item>
         </SplitButton>
-      </InputGroup> */}
+      </InputGroup>
     </>
 
 

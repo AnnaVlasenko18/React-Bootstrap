@@ -345,15 +345,6 @@ function Dropdowns() {
         </Dropdown.Menu>
       </Dropdown>
     </>
-
-{/* <h3>Menu headers</h3>
-    <> 
-     <Dropdown.Menu show>
-      <Dropdown.Header>Dropdown header</Dropdown.Header>
-      <Dropdown.Item eventKey="2">Another</Dropdown.Item>
-      <Dropdown.Item eventKey="3">Something</Dropdown.Item>
-    </Dropdown.Menu>
-    </> */}
    </>
   );
 }

@@ -3,9 +3,6 @@ import { NavLink } from 'react-router-dom';
 import css from './Header.module.css';
 
 export const Header = () => {
-  const handleClick = (e) => {
-    e.preventDefault(); // Предотвращаем действие по умолчанию для клика
-  };
   return (
     <>
       <header className={css.header}>

@@ -17,7 +17,7 @@ function Overlays() {
 
   const Link = ({ id, children, title }) => (
     <OverlayTrigger overlay={<Tooltip id={id}>{title}</Tooltip>}>
-      <a href="#">{children}</a>
+      <a href="home">{children}</a>
     </OverlayTrigger>
   );
 

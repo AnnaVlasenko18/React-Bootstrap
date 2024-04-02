@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-bootstrap/static/css/main.d23d447f.css",
-    "main.js": "/react-bootstrap/static/js/main.f14466e5.js",
+    "main.css": "/react-bootstrap/static/css/main.e09baad3.css",
+    "main.js": "/react-bootstrap/static/js/main.b645df5e.js",
     "static/css/610.5b359041.chunk.css": "/react-bootstrap/static/css/610.5b359041.chunk.css",
     "static/js/610.be9da800.chunk.js": "/react-bootstrap/static/js/610.be9da800.chunk.js",
     "static/js/439.7e71f0aa.chunk.js": "/react-bootstrap/static/js/439.7e71f0aa.chunk.js",
@@ -13,8 +13,8 @@
     "static/js/150.f83cd9a2.chunk.js": "/react-bootstrap/static/js/150.f83cd9a2.chunk.js",
     "static/js/139.383c1d75.chunk.js": "/react-bootstrap/static/js/139.383c1d75.chunk.js",
     "index.html": "/react-bootstrap/index.html",
-    "main.d23d447f.css.map": "/react-bootstrap/static/css/main.d23d447f.css.map",
-    "main.f14466e5.js.map": "/react-bootstrap/static/js/main.f14466e5.js.map",
+    "main.e09baad3.css.map": "/react-bootstrap/static/css/main.e09baad3.css.map",
+    "main.b645df5e.js.map": "/react-bootstrap/static/js/main.b645df5e.js.map",
     "610.5b359041.chunk.css.map": "/react-bootstrap/static/css/610.5b359041.chunk.css.map",
     "610.be9da800.chunk.js.map": "/react-bootstrap/static/js/610.be9da800.chunk.js.map",
     "439.7e71f0aa.chunk.js.map": "/react-bootstrap/static/js/439.7e71f0aa.chunk.js.map",
@@ -27,7 +27,7 @@
     "139.383c1d75.chunk.js.map": "/react-bootstrap/static/js/139.383c1d75.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d23d447f.css",
-    "static/js/main.f14466e5.js"
+    "static/css/main.e09baad3.css",
+    "static/js/main.b645df5e.js"
   ]
 }

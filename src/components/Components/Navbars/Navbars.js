@@ -7,8 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Navbars() {
   return (
     <>
-    <h3>Navbars:</h3>
-    <h2>Overview</h2>
+    <h2>Navbars:</h2>
+    <h3>Overview</h3>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>

@@ -13,10 +13,15 @@ import ListGroups from '../../components/Components/ListGroups/ListGroups.js'
 import ModalsForm from '../../components/Components/ModalsForm/ModalsForm.js'
 import Navbars from '../../components/Components/Navbars/Navbars.js'
 import NavsAndTabs from '../../components/Components/NavsAndTabs/NavsAndTabs.js'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-// import Alerts from '../../components/Components'
-
+import OffcanvasHidden from '../../components/Components/Offcanvas/Offcanvas.js'
+import Overlays from '../../components/Components/Overlay/Overlay.js'
+import Paginations from '../../components/Components/Pagination/Pagination.js'
+import Placeholders from '../../components/Components/Placeholders/Placeholders.js'
+import ProgressBars from '../../components/Components/ProgressBars/ProgressBars.js'
+import Spinners from '../../components/Components/Spinners/Spinners.js'
+import Tables from '../../components/Components/Tables/Tables.js'
+import TabbedComponents from '../../components/Components/TabbedComponents/TabbedComponents.js'
+import Toasts from '../../components/Components/Toasts/Toasts.js'
 
 function ComponentsPage() {
     return (
@@ -37,6 +42,15 @@ function ComponentsPage() {
      <ModalsForm/>
      <Navbars/>
      <NavsAndTabs/>
+     <OffcanvasHidden/>
+     <Overlays/>
+     <Paginations/>
+     <Placeholders/>
+     <ProgressBars/>
+     <Spinners/>
+     <Tables/>
+     <TabbedComponents/>
+     <Toasts/>
      </>
     );
   }

@@ -2,6 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import { Form } from 'react-bootstrap';
+import VerticallyCentered from './VerticallyCentered';
+import UsingGrid from '../Navbars/UsingGrid';
 
 function ModalsForm() {
     const [show, setShow] = useState(false);
@@ -132,6 +134,12 @@ function ModalsForm() {
         </Modal.Footer>
       </Modal>
     </>
+
+    <h3>Vertically centered</h3>
+    <VerticallyCentered/>
+
+    <h3>Usingthe grid</h3>
+    <UsingGrid/>
 
     <h3>Focus on specific element</h3>
     <>

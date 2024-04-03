@@ -3,8 +3,9 @@
     /* float: left; 
     margin-right: 16px; 
     box-sizing: border-box; 
-    border: 1px solid black;  */
- }
+    border: 1px solid black; 
+    padding: 24px; */
+}
 
 .title{
     font-weight: 700;
@@ -12,3 +13,13 @@
     letter-spacing: 0.1em;
     margin: 0;
 } 
+/* 
+.containerForm{
+padding: 24px 24px 0 24px;
+}
+
+.subtitle{
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+} */

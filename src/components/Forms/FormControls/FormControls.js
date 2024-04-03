@@ -1,12 +1,16 @@
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import css from './FormControls.module.css'
+import Card from 'react-bootstrap/Card'
 
 function FormControls() {
   return (
+    <Card border="dark" className={css.container}>
+      <Card.Header className={css.title}> FormControls</Card.Header>
+      <Card.Body>
     <Form>
-      <h2> FormControls:</h2>
-      <h3>Example</h3>
+      <Card.Title className={css.subtitle}>Example</Card.Title>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="name@example.com" />
@@ -15,15 +19,17 @@ function FormControls() {
         <Form.Label>Example textarea</Form.Label>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
-
-      <h3>Sizing</h3>
+        
+      <br />
+      <Card.Title className={css.subtitle}>Sizing</Card.Title>
       <Form.Control size="lg" type="text" placeholder="Large text" />
       <br />
       <Form.Control type="text" placeholder="Normal text" />
       <br />
       <Form.Control size="sm" type="text" placeholder="Small text" />
 
-      <h3>Disabled</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Disabled</Card.Title>
       <Form.Control
         type="text"
         placeholder="Disabled input"
@@ -38,11 +44,15 @@ function FormControls() {
         aria-label="Disabled input example"
         readOnly
       />
-
-      <h3>Readonly</h3>
+         <br />
+      
+      <br />
+      <Card.Title className={css.subtitle}>Readonly</Card.Title>
       <Form.Control type="text" placeholder="Readonly input here..." readOnly />
-
-      <h3>Readonly plain text</h3>
+      <br />
+      
+      <br />
+      <Card.Title className={css.subtitle}>Readonly plain text</Card.Title>
       <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
         <Form.Label column sm="2">
           Email
@@ -61,7 +71,8 @@ function FormControls() {
         </Col>
       </Form.Group>
 
-      <h3>File input</h3>
+      <br />
+      <Card.Title className={css.subtitle}>File input</Card.Title>
       <Form.Group controlId="formFile" className="mb-3">
         <Form.Label>Default file input example</Form.Label>
         <Form.Control type="file" />
@@ -83,7 +94,8 @@ function FormControls() {
         <Form.Control type="file" size="lg" />
       </Form.Group>
 
-      <h3>Color</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Color</Card.Title>
       <Form.Label htmlFor="exampleColorInput">Color picker</Form.Label>
       <Form.Control
         type="color"
@@ -92,6 +104,8 @@ function FormControls() {
         title="Choose your color"
       />
     </Form>
+    </Card.Body>
+    </Card>
   );
 }
 

@@ -1,6 +1,6 @@
 import Qverview from '../../components/Forms/Qverview/Qverview';
 import FormControls from '../../components/Forms/FormControls/FormControls'
-import FormText from '../../components/Forms/Form text/Form text'
+import FormText from '../../components/Forms/FormText/FormText'
 import Select from '../../components/Forms/Select/Select'
 import ChecksAndRadios from '../../components/Forms/ChecksAndRadios/ChecksAndRadios'
 import Range from '../../components/Forms/Range/Range'
@@ -13,16 +13,15 @@ import Validation from '../../components/Forms/Validation/Validation'
 function FormsPage() {
     return (
      <>
-       <h1>Forms</h1>
           <Qverview/>
+          <FloatingLabels/>
+          <ChecksAndRadios/>
+          <InputsGroup/>
           <FormControls/>
+          <Layout/>
+          <Range/>
           <FormText/>
           <Select/>
-          <ChecksAndRadios/>
-          <Range/>
-          <InputsGroup/>
-          <FloatingLabels/>
-          <Layout/>
           <Validation/>
        </>
     );

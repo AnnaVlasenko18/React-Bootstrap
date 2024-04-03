@@ -2,24 +2,24 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { Dropdown, DropdownButton, SplitButton } from 'react-bootstrap';
-// import Dropdown from 'react-bootstrap/Dropdown';
-// import DropdownButton from 'react-bootstrap/DropdownButton';
-// import SplitButton from 'react-bootstrap/SplitButton';
+import css from './InputGroup.module.css'
+import Card from 'react-bootstrap/Card'
 
 function InputsGroup() {
   return (
-    <>
-    <h2>Input Group</h2>
-      <InputGroup className="mb-3">
-        <h3>Example</h3>
-        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Input Group</Card.Header>
+    <Card.Body>
+    <Card.Title className={css.subtitle}>Example</Card.Title>
+          <InputGroup className="mb-3">
+          <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
         <Form.Control
           placeholder="Username"
           aria-label="Username"
           aria-describedby="basic-addon1"
         />
       </InputGroup>
-
+   
       <InputGroup className="mb-3">
         <Form.Control
           placeholder="Recipient's username"
@@ -48,7 +48,8 @@ function InputsGroup() {
         <Form.Control as="textarea" aria-label="With textarea" />
       </InputGroup>
 
-      <h3>Sizing</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Sizing</Card.Title>
       <InputGroup size="sm" className="mb-3">
         <InputGroup.Text id="inputGroup-sizing-sm">Small</InputGroup.Text>
         <Form.Control
@@ -75,7 +76,8 @@ function InputsGroup() {
         />
       </InputGroup>
 
-      <h3>Checkboxes and radios</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Checkboxes and radios</Card.Title>
       <InputGroup className="mb-3">
         <InputGroup.Checkbox aria-label="Checkbox for following text input" />
         <Form.Control aria-label="Text input with checkbox" />
@@ -85,14 +87,16 @@ function InputsGroup() {
         <Form.Control aria-label="Text input with radio button" />
       </InputGroup>
 
-      <h3>Multiple inputs</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Multiple inputs</Card.Title>
       <InputGroup className="mb-3">
       <InputGroup.Text>First and last name</InputGroup.Text>
       <Form.Control aria-label="First name" />
       <Form.Control aria-label="Last name" />
     </InputGroup>
 
-    <h3>Multiple addons</h3>
+    <br />
+    <Card.Title className={css.subtitle}>Multiple addons</Card.Title>
     <InputGroup className="mb-3">
         <InputGroup.Text>$</InputGroup.Text>
         <InputGroup.Text>0.00</InputGroup.Text>
@@ -104,7 +108,8 @@ function InputsGroup() {
         <InputGroup.Text>0.00</InputGroup.Text>
       </InputGroup>
 
-    <h3>Button addons</h3>
+      <br />
+    <Card.Title className={css.subtitle}>Button addons</Card.Title>
       <InputGroup className="mb-3">
         <Button variant="outline-secondary" id="button-addon1">
           Button
@@ -140,8 +145,9 @@ function InputsGroup() {
         <Button variant="outline-secondary">Button</Button>
         <Button variant="outline-secondary">Button</Button>
       </InputGroup>
-
-      <h3>Buttons with Dropdowns</h3>
+  
+      <br />
+      <Card.Title className={css.subtitle}>Buttons with Dropdowns</Card.Title>
       <InputGroup className="mb-3">
         <DropdownButton
           variant="outline-secondary"
@@ -201,7 +207,8 @@ function InputsGroup() {
         </DropdownButton>
       </InputGroup>
 
-      <h3>Segmented buttons</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Segmented buttons</Card.Title>
       <InputGroup className="mb-3">
         <SplitButton
           variant="outline-secondary"
@@ -232,7 +239,8 @@ function InputsGroup() {
           <Dropdown.Item href="#">Separated link</Dropdown.Item>
         </SplitButton>
       </InputGroup>
-    </>
+      </Card.Body>    
+    </Card>
 
 
   );

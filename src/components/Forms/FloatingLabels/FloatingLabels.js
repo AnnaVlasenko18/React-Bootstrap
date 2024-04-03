@@ -1,12 +1,16 @@
 import { Col, Row } from 'react-bootstrap';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import css from './FloatingLabels.module.css'
+import Card from 'react-bootstrap/Card'
 
 function FloatingLabels() {
 return (
-    <>
-    <h2>Floating Labels</h2>
-    <h3>Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header  className={css.title}>Floating Labels</Card.Header>
+
+    <Card.Body>
+    <Card.Title className={css.subtitle}>Example</Card.Title>
     <FloatingLabel
         controlId="floatingInput"
         label="Email address"
@@ -17,7 +21,9 @@ return (
       <FloatingLabel controlId="floatingPassword" label="Password">
         <Form.Control type="password" placeholder="Password" />
       </FloatingLabel>
-    <h3>Textareas</h3>  
+
+<br/>
+    <Card.Title className={css.subtitle}>Textareas</Card.Title>  
     <FloatingLabel
         controlId="floatingTextarea"
         label="Comments"
@@ -33,7 +39,8 @@ return (
         />
       </FloatingLabel>
 
-    <h3>Selects</h3>
+<br/>
+    <Card.Title className={css.subtitle}>Selects</Card.Title>
     <FloatingLabel controlId="floatingSelect" label="Works with selects">
       <Form.Select aria-label="Floating label select example">
         <option>Open this select menu</option>
@@ -43,7 +50,8 @@ return (
       </Form.Select>
     </FloatingLabel> 
 
-    <h3>Layout</h3> 
+<br/>
+    <Card.Title className={css.subtitle}>Layout</Card.Title> 
     <Row className="g-2">
       <Col md>
         <FloatingLabel controlId="floatingInputGrid" label="Email address">
@@ -65,7 +73,8 @@ return (
       </Col>
     </Row>
 
-    <h3>Customizing rendering</h3>
+<br/>
+    <Card.Title className={css.subtitle}>Customizing rendering</Card.Title>
     <Form.Floating className="mb-3">
         <Form.Control
           id="floatingInputCustom"
@@ -82,7 +91,8 @@ return (
         />
         <label htmlFor="floatingPasswordCustom">Password</label>
       </Form.Floating>
-    </>
+      </Card.Body>
+    </Card>
 )
 }
  export default FloatingLabels

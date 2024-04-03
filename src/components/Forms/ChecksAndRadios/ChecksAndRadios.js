@@ -1,11 +1,15 @@
 import Form from 'react-bootstrap/Form';
+import css from './ChecksAndRadios.module.css'
+import Card from 'react-bootstrap/Card'
+import { CardBody } from 'react-bootstrap';
 
 function ChecksAndRadios() {
     return(
-        <>
-        <h2>Checks and radios</h2>
+        <Card border="dark" className={css.container}>
+        <Card.Header className={css.title}>Checks and radios</Card.Header>
+        <CardBody>
         <Form>
-            <h3>Default (stacked)</h3>
+            <Card.Title className={css.subtitle}>Default (stacked)</Card.Title>
       {['checkbox', 'radio'].map((type) => (
         <div key={`default-${type}`} className="mb-3">
           <Form.Check // prettier-ignore
@@ -23,7 +27,8 @@ function ChecksAndRadios() {
         </div>
       ))}
 
-      <h3>Switches</h3>
+   <br />
+      <Card.Title className={css.subtitle}>Switches</Card.Title>
       <Form.Check // prettier-ignore
         type="switch"
         id="custom-switch"
@@ -35,8 +40,9 @@ function ChecksAndRadios() {
         label="disabled switch"
         id="disabled-custom-switch"
       />
-
-      <h3>Inline</h3>
+ 
+ <br />
+      <Card.Title className={css.subtitle}>Inline</Card.Title>
       {['checkbox', 'radio'].map((type) => (
         <div key={`inline-${type}`} className="mb-3">
           <Form.Check
@@ -62,8 +68,9 @@ function ChecksAndRadios() {
           />
         </div>
       ))}
-
-      <h3>Reverse</h3>
+ 
+ <br />
+      <Card.Title className={css.subtitle}>Reverse</Card.Title>
       {['checkbox', 'radio'].map((type) => (
         <div key={`reverse-${type}`} className="mb-3">
           <Form.Check
@@ -89,11 +96,14 @@ function ChecksAndRadios() {
           />
         </div>
       ))}
-      <h3>Without labels</h3>
+
+     <br />
+      <Card.Title className={css.subtitle}>Without labels</Card.Title>
       <Form.Check aria-label="option 1" />
       <Form.Check type="radio" aria-label="radio 1" />
 
-      <h3>Customizing FormCheck rendering</h3>
+      <br />
+      <Card.Title className={css.subtitle}>Customizing FormCheck rendering</Card.Title>
       {['checkbox', 'radio'].map((type) => (
         <div key={type} className="mb-3">
           <Form.Check type={type} id={`check-api-${type}`}>
@@ -105,8 +115,10 @@ function ChecksAndRadios() {
           </Form.Check>
         </div>
       ))}
+
     </Form>
-        </>
+    </CardBody>
+        </Card >
     )
 }
 

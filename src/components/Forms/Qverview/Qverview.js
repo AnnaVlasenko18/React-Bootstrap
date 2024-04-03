@@ -1,12 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import css from './Qverview.module.css'
+import Card from 'react-bootstrap/Card'
 
 function Qverview() {
   return (
-  
+    <Card border="dark" className={css.container}>
+  <Card.Header className={css.title}>Overview</Card.Header>
+  <Card.Body>
       <Form>
-          <h2> Qverview:</h2>
-          <h3>Overview</h3>
+          <Card.Title className={css.subtitle}>Overview</Card.Title>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -27,8 +30,10 @@ function Qverview() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-
-      <h3>Disabled forms</h3>
+         <br />
+      
+         <br />
+      <Card.Title className={css.subtitle}>Disabled forms</Card.Title>
       <Form.Group className="mb-3">
         <Form.Label>Disabled input</Form.Label>
         <Form.Control placeholder="Disabled input" disabled />
@@ -42,29 +47,9 @@ function Qverview() {
       <Form.Group className="mb-3">
         <Form.Check type="checkbox" label="Can't check this" disabled />
       </Form.Group>
-
-      <fieldset disabled>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="disabledTextInput">Disabled input</Form.Label>
-          <Form.Control id="disabledTextInput" placeholder="Disabled input" />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="disabledSelect">Disabled select menu</Form.Label>
-          <Form.Select id="disabledSelect">
-            <option>Disabled select</option>
-          </Form.Select>
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Check
-            type="checkbox"
-            id="disabledFieldsetCheck"
-            label="Can't check this"
-          />
-        </Form.Group>
-        <Button type="submit">Submit</Button>
-      </fieldset>
-    </Form>
-
+     </Form>
+    </Card.Body>
+    </Card>
   );
 }
 

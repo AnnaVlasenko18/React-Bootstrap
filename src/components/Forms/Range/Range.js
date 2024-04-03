@@ -1,14 +1,20 @@
-import  {Form} from "react-bootstrap";
+import  {Card, Form} from "react-bootstrap";
+import css from './Range.module.css'
+
 
 function Range() {
     return (
-        <>
-        <h2>Range</h2>
-        <h3>Overview</h3>
-        <Form.Label>Range</Form.Label>
-      <Form.Range />
-        </>
+
+  <Card border="dark" className={css.container} >
+      <Card.Header className={css.title}>Range</Card.Header>
+      <Card.Body>
+        <Card.Title>Overview</Card.Title>
+          <Form.Label>Range</Form.Label>
+          <Form.Range />
+      </Card.Body>
+    </Card>
     )
 }
 
 export default Range
+

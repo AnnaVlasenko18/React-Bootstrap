@@ -3,14 +3,18 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button' 
 import InputGroup from 'react-bootstrap/InputGroup'
+import css from './Layout.module.css'
+import Card from 'react-bootstrap/Card'
 
 
 function Layout() {
     return(
-        <>
-        <h2>Layout Forms</h2>
-        <h3>Form groups</h3>
+        <Card border="dark" className={css.container}>
+        <Card.Header className={css.title}>Layout Forms</Card.Header>
+        <Card.Body>
         <Form>
+
+        <Card.Title className={css.subtitle}>Form groups</Card.Title>
            <Form.Group className="mb-3" controlId="formGroupEmail">
                <Form.Label>Email address</Form.Label>
                <Form.Control type="email" placeholder="Enter email" />
@@ -19,8 +23,9 @@ function Layout() {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
            </Form.Group>
+           <br />
 
-           <h3>Form grid</h3>
+           <Card.Title className={css.subtitle}>Form grid</Card.Title>
                <Row>
                    <Col>
                        <Form.Control placeholder="First name" />
@@ -79,7 +84,10 @@ function Layout() {
                 <Button variant="primary" type="submit">
                    Submit
                 </Button>
-            <h3>Horizontal form</h3> 
+<br/>
+
+                <br/>
+            <Card.Title>Horizontal form</Card.Title> 
             <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>
           Email
@@ -135,7 +143,9 @@ function Layout() {
           <Button type="submit">Sign in</Button>
         </Col>
       </Form.Group>  
-             <h3>Column sizing</h3>   
+
+      <br/>
+             <Card.Title>Column sizing</Card.Title>   
              <Row>
         <Col xs={7}>
           <Form.Control placeholder="City" />
@@ -147,7 +157,9 @@ function Layout() {
           <Form.Control placeholder="Zip" />
         </Col>
       </Row> 
-             <h3>Auto-sizing</h3>
+      <br />
+
+    <Card.Title>Auto-sizing</Card.Title>
              <Row className="align-items-center">
         <Col xs="auto">
           <Form.Label htmlFor="inlineFormInput" visuallyHidden>
@@ -183,7 +195,8 @@ function Layout() {
         </Col>
       </Row>
          </Form>
-        </>
+         </Card.Body>
+        </Card>
     )
 }
 

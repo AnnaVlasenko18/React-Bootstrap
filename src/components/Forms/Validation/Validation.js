@@ -6,6 +6,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import * as formik from 'formik';
 import * as yup from 'yup';
+import css from './Validation.module.css'
+import Card from 'react-bootstrap/Card'
 
 function Validation() {
   const [validated, setValidated] = useState(false);
@@ -33,10 +35,12 @@ function Validation() {
   };
 
   return (
-    <>
-        <h2>Validation</h2>
-        <h3>Native HTML5 form validation</h3>
+    <Card border="dark" className={css.container}>
+        <Card.Header className={css.title}>Validation</Card.Header>
+        
+        <Card.Body>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Card.Title>Native HTML5 form validation</Card.Title>
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Label>First name</Form.Label>
@@ -103,11 +107,15 @@ function Validation() {
           label="Agree to terms and conditions"
           feedback="You must agree before submitting."
           feedbackType="invalid"
-        />
-      </Form.Group>
-      <Button type="submit">Submit form</Button>
+        />     
 
-      <h3>Input group validation</h3>
+      </Form.Group>
+      
+      <Button type="submit">Submit form</Button>
+      <br />
+      
+      <br /> 
+      <Card.Title className={css.subtitle}>Input group validation</Card.Title>
       <InputGroup hasValidation>
       <InputGroup.Text>@</InputGroup.Text>
       <Form.Control type="text" required isInvalid />
@@ -115,10 +123,12 @@ function Validation() {
         Please choose a username.
       </Form.Control.Feedback>
     </InputGroup>
-    </Form>
-
-    <h3>Form libraries and server-rendered styles(Formik)</h3>
-    <Formik
+       </Form>
+       <br />
+      
+      <br />
+      <Card.Title className={css.subtitle}>Form libraries and server-rendered styles(Formik)</Card.Title>
+      <Formik
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
@@ -278,7 +288,8 @@ function Validation() {
         </Form>
       )}
     </Formik>
-        </>
+      </Card.Body>
+    </Card>
 
    
   );

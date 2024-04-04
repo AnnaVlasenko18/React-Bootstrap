@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Card, Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import css from './Toasts.module.css'
 
 function Toasts() {
     const [showA, setShowA] = useState(true);
@@ -17,9 +18,10 @@ function Toasts() {
 
   const [show, setShow] = useState(false);
   return (
-    <>
-    <h2>Toasts</h2>
-    <h3>Basic</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Toasts</Card.Header>
+    <Card.Body>
+    <Card.Title>Basic</Card.Title>
     <>
     <Toast>
       <Toast.Header>
@@ -30,8 +32,10 @@ function Toasts() {
       <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
     </Toast>
     </>
+    <br/>
 
-    <h3>Dismissible</h3>
+<br/>
+    <Card.Title>Dismissible</Card.Title>
     <>
     <Row>
       <Col md={6} className="mb-2">
@@ -70,8 +74,10 @@ function Toasts() {
       </Col>
     </Row>
     </>
+    <br/>
 
-    <h3>Stacking</h3>
+<br/>
+    <Card.Title>Stacking</Card.Title>
     <>
     <ToastContainer className="position-static">
       <Toast>
@@ -92,8 +98,10 @@ function Toasts() {
       </Toast>
     </ToastContainer>
     </>
+    <br/>
 
-    <h3>Placement</h3>
+<br/>
+    <Card.Title>Placement</Card.Title>
     <>
       <div className="mb-3">
         <label htmlFor="selectToastPlacement">Toast position</label>
@@ -147,7 +155,10 @@ function Toasts() {
       </div>
     </>
 
-    <h3>Autohide</h3>
+    <br/>
+
+<br/>
+  <Card.Title>Autohide</Card.Title>
     <>
     <Row>
       <Col xs={6}>
@@ -169,8 +180,10 @@ function Toasts() {
       </Col>
     </Row>
     </>
+    <br/>
 
-    <h3>Contextual variations</h3>
+<br/>
+    <Card.Title>Contextual variations</Card.Title>
     <>
       {[
         'Primary',
@@ -202,7 +215,8 @@ function Toasts() {
         </Toast>
       ))}
     </>
-    </>
+    </Card.Body>
+    </Card>
 
   );
 }

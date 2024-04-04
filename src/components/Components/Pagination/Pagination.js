@@ -1,10 +1,13 @@
 import Pagination from 'react-bootstrap/Pagination';
+import css from './Pagination.module.css'
+import { Card } from 'react-bootstrap';
 
 function Paginations() {
   return (
-    <>
-    <h2>Pagination:</h2>
-    <h3>More options</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Pagination:</Card.Header>
+    <Card.Body>
+    <Card.Title>More options</Card.Title>
     <Pagination>
       <Pagination.First />
       <Pagination.Prev />
@@ -22,7 +25,8 @@ function Paginations() {
       <Pagination.Next />
       <Pagination.Last />
     </Pagination>
-    </>
+    </Card.Body>
+    </Card>
 
   );
 }

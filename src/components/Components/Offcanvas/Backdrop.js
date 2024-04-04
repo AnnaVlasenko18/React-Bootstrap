@@ -33,7 +33,7 @@ function OffCanvasExamples({ name, ...props }) {
 
   return (
     <>
-      <Button variant="primary" onClick={toggleShow} className="me-2">
+      <Button variant="primary" onClick={toggleShow} className="me-2" style={{ marginRight: '8px', marginBottom: '16px' }}>
         {name}
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props}>

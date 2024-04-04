@@ -1,5 +1,6 @@
-import { Badge, Col, Row, Tab } from 'react-bootstrap';
+import { Badge, Card, Col, Row, Tab } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
+import css from './ListGroups.module.css'
 
 function ListGroups() {
     const alertClicked = () => {
@@ -8,9 +9,10 @@ function ListGroups() {
     
     
   return (
-    <>
-    <h2>ListGroups:</h2>
-    <h3>Basic Example</h3>
+    <Card border="dark" className={css.container} >
+    <Card.Header className={css.title}>ListGroups:</Card.Header>
+    <Card.Body>
+    <Card.Title>Basic Example</Card.Title>
     <ListGroup>
       <ListGroup.Item>Cras justo odio</ListGroup.Item>
       <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
@@ -18,8 +20,10 @@ function ListGroups() {
       <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
       <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
     </ListGroup>
-    
-    <h3>Active items</h3>
+    <br/>
+
+    <br/>
+    <Card.Title>Active items</Card.Title>
     <ListGroup as="ul">
       <ListGroup.Item as="li" active>
         Cras justo odio
@@ -30,16 +34,20 @@ function ListGroups() {
       </ListGroup.Item>
       <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
     </ListGroup>
+    <br/>
 
-    <h3>Disabled items</h3>
+    <br/>
+    <Card.Title>Disabled items</Card.Title>
     <ListGroup>
       <ListGroup.Item disabled>Cras justo odio</ListGroup.Item>
       <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
       <ListGroup.Item>Morbi leo risus</ListGroup.Item>
       <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
     </ListGroup>
+    <br/>
 
-    <h3>Actionable items</h3>
+    <br/>
+    <Card.Title>Actionable items</Card.Title>
     <ListGroup defaultActiveKey="#link1">
       <ListGroup.Item action href="#link1">
         Link 1
@@ -51,22 +59,28 @@ function ListGroups() {
         This one is a button
       </ListGroup.Item>
     </ListGroup>
+    <br/>
 
-    <h3>Flush</h3>
+    <br/>
+    <Card.Title>Flush</Card.Title>
     <ListGroup variant="flush">
       <ListGroup.Item>Cras justo odio</ListGroup.Item>
       <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
       <ListGroup.Item>Morbi leo risus</ListGroup.Item>
       <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
     </ListGroup>
+    <br/>
 
-    <h3>Numbered</h3>
+    <br/>
+    <Card.Title>Numbered</Card.Title>
     <ListGroup as="ol" numbered>
       <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
       <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
       <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
     </ListGroup>
+    <br/>
 
+    <br/>
     <ListGroup as="ol" numbered>
       <ListGroup.Item
         as="li"
@@ -105,8 +119,10 @@ function ListGroups() {
         </Badge>
       </ListGroup.Item>
     </ListGroup>
+    <br/>
 
-    <h3>Horizontal</h3>
+    <br/>
+    <Card.Title>Horizontal</Card.Title>
     <ListGroup horizontal>
       <ListGroup.Item>This</ListGroup.Item>
       <ListGroup.Item>ListGroup</ListGroup.Item>
@@ -124,8 +140,10 @@ function ListGroups() {
         </ListGroup>
       ))}
     </>
-    
-    <h3>Contextual classes</h3>
+    <br/>
+
+<br/>  
+    <Card.Title>Contextual classes</Card.Title>
     <ListGroup>
       <ListGroup.Item>No style</ListGroup.Item>
       <ListGroup.Item variant="primary">Primary</ListGroup.Item>
@@ -163,8 +181,10 @@ function ListGroups() {
         Dark
       </ListGroup.Item>
     </ListGroup>
+    <br/>
 
-    <h3>Tabbed Interfaces</h3>
+    <br/>
+    <Card.Title>Tabbed Interfaces</Card.Title>
     <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
       <Row>
         <Col sm={4}>
@@ -185,7 +205,8 @@ function ListGroups() {
         </Col>
       </Row>
     </Tab.Container>
-    </>
+    </Card.Body>
+    </Card>
     
   );
 }

@@ -1,13 +1,14 @@
-import { Button, ButtonGroup, Container, DropdownButton, Nav, NavDropdown, Navbar, SplitButton } from 'react-bootstrap';
+import { Button, ButtonGroup, Card, Container, DropdownButton, Nav, NavDropdown, Navbar, SplitButton } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import css from './Dropdowns.module.css'
 
 
 function Dropdowns() {
   return (
-    <>
-    <h2>Dropdowns</h2>
-    <h3>Single button dropdowns</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Dropdowns</Card.Header>
+    <Card.Body>
+    <Card.Title>Single button dropdowns</Card.Title>
     <Dropdown>
     <Dropdown.Toggle variant="success" id="dropdown-basic">
       Dropdown Button
@@ -19,6 +20,9 @@ function Dropdowns() {
       <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
     </Dropdown.Menu>
   </Dropdown>
+  <br/>
+
+<br/>
 
   <>
       {['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger'].map(
@@ -29,6 +33,7 @@ function Dropdowns() {
             id={`dropdown-variants-${variant}`}
             variant={variant.toLowerCase()}
             title={variant}
+            style={{ marginRight: '8px', marginBottom: '16px' }}
           >
             <Dropdown.Item eventKey="1">Action</Dropdown.Item>
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -41,11 +46,13 @@ function Dropdowns() {
         ),
       )}
     </>
+<br/>
 
-    <h3>Split button dropdowns</h3>
+<br/>
+    <Card.Title>Split button dropdowns</Card.Title>
     <>
     <Dropdown as={ButtonGroup}>
-      <Button variant="success">Split Button</Button>
+      <Button variant="success" >Split Button</Button>
 
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
 
@@ -56,7 +63,9 @@ function Dropdowns() {
       </Dropdown.Menu>
     </Dropdown>
     </>
+<br/>
 
+<br/>
     <>
       {['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger'].map(
         (variant) => (
@@ -65,6 +74,7 @@ function Dropdowns() {
             id={`dropdown-split-variants-${variant}`}
             variant={variant.toLowerCase()}
             title={variant}
+            style={{ marginRight: '8px', marginBottom: '16px' }}
           >
             <Dropdown.Item eventKey="1">Action</Dropdown.Item>
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -77,8 +87,10 @@ function Dropdowns() {
         ),
       )}
     </>
+    <br/>
 
-    <h3>Sizing</h3>
+<br/>
+    <Card.Title>Sizing</Card.Title>
     <>
       <div className="mb-2">
         {[DropdownButton, SplitButton].map((DropdownType, idx) => (
@@ -88,6 +100,7 @@ function Dropdowns() {
             id={`dropdown-button-drop-${idx}`}
             size="lg"
             title="Drop large"
+            style={{ marginRight: '8px', marginBottom: '16px' }}
           >
             <Dropdown.Item eventKey="1">Action</Dropdown.Item>
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -106,6 +119,7 @@ function Dropdowns() {
             size="sm"
             variant="secondary"
             title="Drop small"
+            style={{ marginRight: '8px', marginBottom: '16px' }}
           >
             <Dropdown.Item eventKey="1">Action</Dropdown.Item>
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -116,8 +130,10 @@ function Dropdowns() {
         ))}
       </div>
     </>
+    <br/>
 
-    <h3>Dark dropdowns</h3>
+<br/>
+    <Card.Title>Dark dropdowns</Card.Title>
     <>
       <Dropdown data-bs-theme="dark">
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
@@ -151,6 +167,7 @@ function Dropdowns() {
         <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
       </DropdownButton>
     </>
+    <br/>
 
     <Navbar variant="dark" bg="dark" expand="lg">
       <Container fluid>
@@ -177,8 +194,10 @@ function Dropdowns() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <br/>
 
-    <h3>Drop directions</h3>
+<br/>
+    <Card.Title>Drop directions</Card.Title>
       <div className="mb-2">
         {['up', 'up-centered', 'down', 'down-centered', 'start', 'end'].map(
           (direction) => (
@@ -189,6 +208,7 @@ function Dropdowns() {
               drop={direction}
               variant="secondary"
               title={` Drop ${direction} `}
+              style={{ marginRight: '8px', marginBottom: '16px' }}
             >
               <Dropdown.Item eventKey="1">Action</Dropdown.Item>
               <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -209,6 +229,7 @@ function Dropdowns() {
               drop={direction}
               variant="secondary"
               title={`Drop ${direction}`}
+              style={{ marginRight: '8px', marginBottom: '16px' }}
             >
               <Dropdown.Item eventKey="1">Action</Dropdown.Item>
               <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -219,16 +240,20 @@ function Dropdowns() {
           ),
         )}
       </div>
+      <br/>
 
-    <h3>Dropdown items</h3>
+<br/>
+    <Card.Title>Dropdown items</Card.Title>
     <DropdownButton id="dropdown-item-button" title="Dropdown button">
       <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText>
       <Dropdown.Item as="button">Action</Dropdown.Item>
       <Dropdown.Item as="button">Another action</Dropdown.Item>
       <Dropdown.Item as="button">Something else</Dropdown.Item>
     </DropdownButton>
+    <br/>
 
-    <h3>Menu alignment</h3>
+<br/>
+    <Card.Title>Menu alignment</Card.Title>
     <DropdownButton
       align="end"
       title="Dropdown end"
@@ -240,8 +265,10 @@ function Dropdowns() {
       <Dropdown.Divider />
       <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
     </DropdownButton>
+    <br/>
 
-    <h3>Responsive alignment</h3>
+<br/>
+    <Card.Title>Responsive alignment</Card.Title>
     <>
       <div>
         <DropdownButton
@@ -265,11 +292,13 @@ function Dropdowns() {
         </SplitButton>
       </div>
     </>
+    <br/>
 
-    <h3>AutoClose</h3>
-    <>
-      <Dropdown className="d-inline mx-2">
-        <Dropdown.Toggle id="dropdown-autoclose-true">
+<br/>
+    <Card.Title>AutoClose</Card.Title>
+
+        <Dropdown className="d-inline mx-2">
+        <Dropdown.Toggle id="dropdown-autoclose-true" style={{ marginRight: '8px', marginBottom: '16px' }}>
           Default Dropdown
         </Dropdown.Toggle>
 
@@ -281,7 +310,7 @@ function Dropdowns() {
       </Dropdown>
 
       <Dropdown className="d-inline mx-2" autoClose="inside">
-        <Dropdown.Toggle id="dropdown-autoclose-inside">
+        <Dropdown.Toggle id="dropdown-autoclose-inside" style={{ marginRight: '8px', marginBottom: '16px' }}>
           Clickable Outside
         </Dropdown.Toggle>
 
@@ -315,9 +344,11 @@ function Dropdowns() {
           <Dropdown.Item href="#">Menu Item</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-    </>
 
-    <h3>Customization</h3>
+    <br/>
+
+<br/>
+    <Card.Title>Customization</Card.Title>
     <>
       <Dropdown as={ButtonGroup}>
         <Dropdown.Toggle id="dropdown-custom-1">Pow! Zoom!</Dropdown.Toggle>
@@ -345,7 +376,8 @@ function Dropdowns() {
         </Dropdown.Menu>
       </Dropdown>
     </>
-   </>
+    </Card.Body>
+   </Card>
   );
 }
 

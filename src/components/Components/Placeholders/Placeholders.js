@@ -1,14 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Placeholder from 'react-bootstrap/Placeholder';
+import css from  './Placeholders.module.css'
 
 function Placeholders() {
   return (
+    <Card border="dark" className={css.container} >
+    <Card.Header className={css.title}>Placeholders:</Card.Header>
+    <Card.Body>
+    <Card.Title>Example</Card.Title>
     <>
-    <h2>Placeholders:</h2>
-    <h3>Example</h3>
-    <>
-    <div className="d-flex justify-content-around">
+    <div className="d-flex justify-content-between">
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src="https://via.placeholder.com/240x180" />
         <Card.Body>
@@ -36,8 +38,10 @@ function Placeholders() {
       </Card>
     </div>
     </>
+<br/>
 
-    <h3>How it works</h3>
+<br/>
+    <Card.Title>How it works</Card.Title>
     <>
       <p aria-hidden="true">
         <Placeholder xs={6} />
@@ -45,14 +49,18 @@ function Placeholders() {
 
       <Placeholder.Button xs={4} aria-hidden="true" />
     </>
+    <br/>
 
-    <h3>Width</h3>
+    <br/>
+    <Card.Title>Width</Card.Title>
     <>
       <Placeholder xs={6} />
       <Placeholder className="w-75" /> <Placeholder style={{ width: '25%' }} />
     </>
+<br/>
 
-    <h3>Color</h3>
+<br/>
+    <Card.Title>Color</Card.Title>
     <>
       <Placeholder xs={12} />
 
@@ -65,16 +73,20 @@ function Placeholders() {
       <Placeholder xs={12} bg="light" />
       <Placeholder xs={12} bg="dark" />
     </>
+    <br/>
 
-    <h3>Sizing</h3>
+    <br/>
+    <Card.Title>Sizing</Card.Title>
     <>
       <Placeholder xs={12} size="lg" />
       <Placeholder xs={12} />
       <Placeholder xs={12} size="sm" />
       <Placeholder xs={12} size="xs" />
     </>
+<br/>
 
-    <h3>Animation</h3>
+<br/>
+    <Card.Title>Animation</Card.Title>
     <>
       <Placeholder as="p" animation="glow">
         <Placeholder xs={12} />
@@ -83,7 +95,8 @@ function Placeholders() {
         <Placeholder xs={12} />
       </Placeholder>
     </>
-    </>
+    </Card.Body>
+    </Card>
    
   );
 }

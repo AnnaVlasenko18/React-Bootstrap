@@ -2,12 +2,15 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+import css from "./Images.module.css"
+import { Card } from 'react-bootstrap';
 
 function Images() {
   return (
-    <>
-    <h2>Images:</h2>
-    <h3>Shape</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Images:</Card.Header>
+    <Card.Body>
+    <Card.Title>Shape</Card.Title>
     <Container>
       <Row>
         <Col xs={6} md={4}>
@@ -21,10 +24,14 @@ function Images() {
         </Col>
       </Row>
     </Container>
+<br/>
 
-    <h3>Fluid</h3>
+<br/>
+    <Card.Title>Fluid</Card.Title>
      <Image src="https://via.placeholder.com/484x250" fluid />
-    </>
+     </Card.Body>
+    </Card>
+
    
   );
 }

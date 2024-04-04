@@ -1,14 +1,16 @@
-import { Button, Col, Form, InputGroup, Offcanvas, Row } from 'react-bootstrap';
+import { Button, Card, Col, Form, InputGroup, Offcanvas, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import css from './Navbars.module.css'
 
 function Navbars() {
   return (
-    <>
-    <h2>Navbars:</h2>
-    <h3>Overview</h3>
+    <Card border="dark" className={css.container}м>
+    <Card.Header className={css.title}>Navbars:</Card.Header>
+    <Card.Body>
+    <Card.Title>Overview</Card.Title>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -32,8 +34,10 @@ function Navbars() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+<br/>
 
-    <h3>Brand</h3>
+<br/>
+    <Card.Title>Brand</Card.Title>
     <>
       <Navbar className="bg-body-tertiary">
         <Container>
@@ -76,8 +80,10 @@ function Navbars() {
         </Container>
       </Navbar>
     </>
+    <br/>
 
-    <h3>Forms</h3>
+<br/>
+    <Card.Title>Forms</Card.Title>
     <Navbar className="bg-body-tertiary justify-content-between">
       <Form inline>
         <InputGroup>
@@ -104,8 +110,10 @@ function Navbars() {
         </Row>
       </Form>
     </Navbar>
+    <br/>
 
-    <h3>Text and Non-nav links</h3>
+<br/>
+    <Card.Title>Text and Non-nav links</Card.Title>
     <Navbar className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
@@ -117,8 +125,10 @@ function Navbars() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <br/>
 
-    <h3>Color schemes</h3>
+<br/>
+    <Card.Title>Color schemes</Card.Title>
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
@@ -154,8 +164,10 @@ function Navbars() {
         </Container>
       </Navbar>
     </>
+    <br/>
 
-    <h3>Containers</h3>
+<br/>
+    <Card.Title>Containers</Card.Title>
     <Container>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
@@ -163,8 +175,10 @@ function Navbars() {
         </Container>
       </Navbar>
     </Container>
+    <br/>
 
-    <h3>Scrolling</h3>
+<br/>
+    <Card.Title>Scrolling</Card.Title>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="home">Navbar scroll</Navbar.Brand>
@@ -203,8 +217,10 @@ function Navbars() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <br/>
 
-    <h3>Responsive behaviors</h3>
+<br/>
+    <Card.Title>Responsive behaviors</Card.Title>
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -234,9 +250,11 @@ function Navbars() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <br/>
 
-    <h3>Offcanvas</h3>
-    <>
+<br/>
+    <Card.Title>Offcanvas</Card.Title>
+
       {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
@@ -284,8 +302,9 @@ function Navbars() {
           </Container>
         </Navbar>
       ))}
-    </>
-    </>
+
+    </Card.Body>
+    </Card>
 
   );
 }

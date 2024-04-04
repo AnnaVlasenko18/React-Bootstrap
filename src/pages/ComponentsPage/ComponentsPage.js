@@ -26,6 +26,10 @@ import Toasts from '../../components/Components/Toasts/Toasts.js'
 function ComponentsPage() {
     return (
      <>
+     <ModalsForm/>
+     <Overlays/>
+     <OffcanvasHidden/>
+
      <Accordions/>
      <Alerts/>
      <Badges/>
@@ -33,23 +37,25 @@ function ComponentsPage() {
      <ButtonsGroup/>
      <Buttons/>
      <Cards/>
+     <Navbars/>
      <Carousels/>
      <CloseButtons/>
      <Dropdowns/>
      <ImagesForm/>
      <ListGroups/>
-     <ModalsForm/>
-     <Navbars/>
+     
+  
      <NavsAndTabs/>
-     <OffcanvasHidden/>
-     <Overlays/>
+    
+    
      <Paginations/>
      <Placeholders/>
      <ProgressBars/>
      <Spinners/>
-     <Tables/>
+   
      <TabbedComponents/>
      <Toasts/>
+     <Tables/>
      </>
     );
   }

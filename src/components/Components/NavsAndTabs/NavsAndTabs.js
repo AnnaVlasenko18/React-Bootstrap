@@ -1,12 +1,14 @@
-import { Dropdown, NavDropdown, NavItem, NavLink } from 'react-bootstrap';
+import { Card, Dropdown, NavDropdown, NavItem, NavLink } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import css from './NavsAndTabs.module.css'
 
 function NavsAndTabs() {
     const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
   return (
-    <>
-    <h2>Navs and tabs</h2>
-    <h3>Base Nav</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Navs and tabs</Card.Header>
+    <Card.Body>
+    <Card.Title>Base Nav</Card.Title>
     <Nav
       activeKey="/home"
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
@@ -26,7 +28,9 @@ function NavsAndTabs() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+<br/>
 
+<br/>
     <Nav defaultActiveKey="/home" as="ul">
       <Nav.Item as="li">
         <Nav.Link href="/home">Active</Nav.Link>
@@ -38,8 +42,10 @@ function NavsAndTabs() {
         <Nav.Link eventKey="link-2">Link</Nav.Link>
       </Nav.Item>
     </Nav>
+    <br/>
 
-    <h3>Available styles</h3>
+<br/>
+    <Card.Title>Available styles</Card.Title>
     <>
     <Nav className="justify-content-center" activeKey="/home">
         <Nav.Item>
@@ -75,8 +81,10 @@ function NavsAndTabs() {
         </Nav.Item>
       </Nav>
     </>
+    <br/>
 
-    <h3>Vertical</h3>
+<br/>
+    <Card.Title>Vertical</Card.Title>
     <Nav defaultActiveKey="/home" className="flex-column">
       <Nav.Link href="/home">Active</Nav.Link>
       <Nav.Link eventKey="link-1">Link</Nav.Link>
@@ -85,8 +93,10 @@ function NavsAndTabs() {
         Disabled
       </Nav.Link>
     </Nav>
+    <br/>
 
-    <h3>Tabs</h3>
+<br/>
+    <Card.Title>Tabs</Card.Title>
     <Nav variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
@@ -100,8 +110,10 @@ function NavsAndTabs() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    <br/>
 
-    <h3>Pills</h3>
+<br/>
+    <Card.Title>Pills</Card.Title>
     <Nav variant="pills" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
@@ -115,8 +127,10 @@ function NavsAndTabs() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    <br/>
 
-    <h3>Underline</h3>
+<br/>
+    <Card.Title>Underline</Card.Title>
     <Nav variant="underline" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
@@ -130,8 +144,10 @@ function NavsAndTabs() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    <br/>
 
-    <h3>Fill and justify</h3>
+<br/>
+    <Card.Title>Fill and justify</Card.Title>
     <Nav fill variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
@@ -148,7 +164,9 @@ function NavsAndTabs() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    <br/>
 
+<br/>
     <Nav justify variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link href="/home">Active</Nav.Link>
@@ -165,15 +183,19 @@ function NavsAndTabs() {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    <br/>
 
-    <h3>Using dropdowns</h3>
+<br/>
+    <Card.Title>Using dropdowns</Card.Title>
     <Dropdown as={NavItem}>
       <Dropdown.Toggle as={NavLink}>Click to see more…</Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item>Hello there!</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
+    <br/>
 
+<br/>
     <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
       <Nav.Item>
         <Nav.Link eventKey="1" href="#/home">
@@ -198,7 +220,8 @@ function NavsAndTabs() {
         <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
       </NavDropdown>
     </Nav>
-    </>
+    </Card.Body>
+    </Card>
 
 
   );

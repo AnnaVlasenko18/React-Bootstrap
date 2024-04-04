@@ -35,36 +35,22 @@ function Badges() {
 
     <br/>
     <Card.Title>Contextual variations</Card.Title>
-<Container>
-  <Row>
-    <Col xs={3}>
-      <Badge bg="primary">Primary</Badge>
-    </Col>
-    <Col xs={3}>
-      <Badge bg="secondary">Secondary</Badge>
-    </Col>
-    <Col xs={3}>
-      <Badge bg="success">Success</Badge>
-    </Col>
-    <Col xs={3}>
-      <Badge bg="danger">Danger</Badge>
-    </Col>
-  </Row>
-  <Row>
-    <Col xs={3}>
-      <Badge bg="warning" text="dark">Warning</Badge>
-    </Col>
-    <Col xs={3}>
-      <Badge bg="info">Info</Badge>
-    </Col>
-    <Col xs={3}>
-      <Badge bg="light" text="dark">Light</Badge>
-    </Col>
-    <Col xs={3}>
-      <Badge bg="dark">Dark</Badge>
-    </Col>
-  </Row>
-</Container>
+    <Stack direction="horizontal" gap={2}>
+      <div style={{ marginBottom: '8px', marginRight: '8px' }}>
+      <Badge bg="primary" style={{ marginRight: '8px' }}>Primary</Badge>
+      <Badge bg="secondary" style={{ marginRight: '8px' }}>Secondary</Badge>
+      <Badge bg="success"style={{ marginRight: '8px' }}>Success</Badge>
+      <Badge bg="danger"style={{ marginRight: '8px' }}>Danger</Badge>
+      <Badge bg="warning" text="dark" style={{ marginRight: '8px' }}>
+        Warning
+      </Badge>
+      <Badge bg="info" style={{ marginRight: '8px' }}>Info</Badge>
+      <Badge bg="light" text="dark" style={{ marginRight: '8px' }}>
+        Light
+      </Badge>
+      <Badge bg="dark" style={{ marginRight: '8px' }}>Dark</Badge>
+      </div>
+    </Stack>
 
     </Card.Body>
     </Card>

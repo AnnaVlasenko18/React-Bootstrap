@@ -1,24 +1,32 @@
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
+import css from './Spinners.module.css'
 
 function Spinners() {
   return (
-    <>
-    <h2>Spinners</h2>
-    <h3>Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Spinners</Card.Header>
+    <Card.Body>
+    <Card.Title>Example</Card.Title>
     <>
     <Spinner animation="border" role="status">
       <span className="visually-hidden">Loading...</span>
     </Spinner>
     </>
+    <br/>
 
-    <h3>Animations</h3>
+<br/>
+    <Card.Title>Animations</Card.Title>
     <Spinner animation="border" />
+    <br/>
 
-    <h3>Grow Spinner</h3>
+<br/>
+    <Card.Title>Grow Spinner</Card.Title>
     <Spinner animation="grow" />
+    <br/>
 
-    <h3>Variants</h3>
+<br/>
+    <Card.Title>Variants</Card.Title>
     <>
       <Spinner animation="border" variant="primary" />
       <Spinner animation="border" variant="secondary" />
@@ -37,16 +45,20 @@ function Spinners() {
       <Spinner animation="grow" variant="light" />
       <Spinner animation="grow" variant="dark" />
     </>
+    <br/>
 
-    <h3>Sizing</h3>
+<br/>
+    <Card.Title>Sizing</Card.Title>
     <>
       <Spinner animation="border" size="sm" />
       <Spinner animation="border" />
       <Spinner animation="grow" size="sm" />
       <Spinner animation="grow" />
     </>
+    <br/>
 
-    <h3>Buttons</h3>
+<br/>
+    <Card.Title>Buttons</Card.Title>
     <>
       <Button variant="primary" disabled>
         <Spinner
@@ -69,12 +81,15 @@ function Spinners() {
         Loading...
       </Button>
     </>
+    <br/>
 
-    <h3>Accessibility</h3>
+<br/>
+    <Card.Title>Accessibility</Card.Title>
     <Spinner animation="border" role="status">
       <span className="visually-hidden">Loading...</span>
     </Spinner>
-    </>
+    </Card.Body>
+    </Card>
 
   );
 }

@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Alert } from 'react-bootstrap';
+import { Alert, Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Example from './Placement'
 import Examples from './Backdrop';
+import css from  './Offcanvas.module.css'
 
 function OffcanvasHidden() {
   const [show, setShow] = useState(false);
@@ -22,9 +23,10 @@ function OffcanvasHidden() {
   const handleShowon = () => setShowon(true);
 
   return (
-    <>
-    <h2>Offcanvas:</h2>
-    <h3>Basic Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Offcanvas:</Card.Header>
+    <Card.Body>
+    <Card.Title>Basic Example</Card.Title>
     <>
     <Button variant="primary" onClick={handleShow}>
         Launch
@@ -40,7 +42,10 @@ function OffcanvasHidden() {
         </Offcanvas.Body>
       </Offcanvas>
       </>
-    <h3>Responsive</h3>
+      <br/>
+
+      <br/>
+    <Card.Title>Responsive</Card.Title>
     <>
     <Button variant="primary" className="d-lg-none" onClick={handleShows}>
         Launch
@@ -61,13 +66,20 @@ function OffcanvasHidden() {
         </Offcanvas.Body>
       </Offcanvas>
       </>
+<br/>
 
-    <h3>Placement</h3>
+<br/>
+    <Card.Title>Placement</Card.Title>
     <Example/>
+<br/>
 
-    <h3>Backdrop</h3>
+<br/>
+    <Card.Title>Backdrop</Card.Title>
     <Examples/>
-    <h3>Static backdrop</h3>
+    <br/>
+
+<br/>
+    <Card.Title>Static backdrop</Card.Title>
     <>
       <Button variant="primary" onClick={handleShowon}>
         Toggle static offcanvas
@@ -82,7 +94,8 @@ function OffcanvasHidden() {
         </Offcanvas.Body>
       </Offcanvas>
     </>
-    </>
+    </Card.Body>
+    </Card>
   );
 }
 

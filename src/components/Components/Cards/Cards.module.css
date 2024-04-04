@@ -4,12 +4,29 @@
 
  .wraper{
   display: flex;
-  flex-wrap: nowrap;
- }
+  justify-content: space-between;
+  }
  
+  .wraperCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+.wraperCardsBorder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
 .title{
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 0.1em;
     margin: 0;
 } 
+
+.card {
+    width: calc(50% - 1rem); 
+    margin-bottom: 1rem; 
+  }

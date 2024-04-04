@@ -4,13 +4,16 @@ import Tabs from 'react-bootstrap/Tabs';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
+import css from './TabbedComponents.module.css'
+import { Card } from 'react-bootstrap';
 
 function TabbedComponents() {
     const [key, setKey] = useState('home');
   return (
-    <>
-    <h2>Tabbed components:</h2>
-    <h3>Examples</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Tabbed components:</Card.Header>
+    <Card.Body>
+    <Card.Title>Examples</Card.Title>
     <>
     <Tabs
       defaultActiveKey="profile"
@@ -28,8 +31,10 @@ function TabbedComponents() {
       </Tab>
     </Tabs>
     </>
+    <br/>
 
-    <h3>Controlled</h3>
+<br/>
+    <Card.Title>Controlled</Card.Title>
     <>
     <Tabs
       id="controlled-tab-example"
@@ -48,8 +53,10 @@ function TabbedComponents() {
       </Tab>
     </Tabs>
     </>
+    <br/>
 
-    <h3>No animation</h3>
+<br/>
+    <Card.Title>No animation</Card.Title>
     <>
     <Tabs
       defaultActiveKey="home"
@@ -68,8 +75,10 @@ function TabbedComponents() {
       </Tab>
     </Tabs>
     </>
+    <br/>
 
-    <h3>Fill and justify</h3>
+<br/>
+    <Card.Title>Fill and justify</Card.Title>
     <>
     <Tabs
       defaultActiveKey="profile"
@@ -91,8 +100,10 @@ function TabbedComponents() {
       </Tab>
     </Tabs>
     </>
+    <br/>
 
-    <h3>Pills</h3>
+<br/>
+    <Card.Title>Pills</Card.Title>
     <>
     <Tab.Container id="left-tabs-example" defaultActiveKey="first">
       <Row>
@@ -115,7 +126,8 @@ function TabbedComponents() {
       </Row>
     </Tab.Container>
     </>
-    </>
+    </Card.Body>
+    </Card>
  
   );
 }

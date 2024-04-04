@@ -1,23 +1,33 @@
 import CloseButton from 'react-bootstrap/CloseButton';
+import css from './CloseButton.module.css'
+import { Card } from 'react-bootstrap';
 
 function CloseButtons() {
   return( 
-  <>
-  <h2>Close Buttons</h2>
+  <Card border="dark" className={css.container} >
+  <Card.Header className={css.title}>Close Buttons</Card.Header>
+  <Card.Body>
   <CloseButton />
+<br/>
 
-  <h3>Disabled state</h3>
+<br/>
+  <Card.Title>Disabled state</Card.Title>
   <CloseButton disabled /> 
+  <br/>
 
-  <h3>Variants</h3>
+<br/>
+  <Card.Title>Variants</Card.Title>
   <div data-bs-theme="dark" className='bg-dark p-2'>
       <CloseButton />
       <CloseButton disabled />
     </div>
+    <br/>
 
-  <h3>Accessibility</h3>
+<br/>
+  <Card.Title>Accessibility</Card.Title>
   <CloseButton aria-label="Hide" />
-  </>
+  </Card.Body>
+  </Card>
 );
 }
 

@@ -1,9 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Card, Form } from 'react-bootstrap';
 import VerticallyCentered from './VerticallyCentered';
-import UsingGrid from '../Navbars/UsingGrid';
+import UsingGrid from './UsingGrid';
+import css from './ModalsForm.module.css'
 
 function ModalsForm() {
     const [show, setShow] = useState(false);
@@ -40,31 +41,10 @@ function ModalsForm() {
   const [showcss, setShowcss] = useState(false);
 
   return (
-    <>
-    <h2>Modals:</h2>
-    <h3>Static Markup</h3>
-    <div
-      className="modal show"
-      style={{ display: 'block', position: 'initial' }}
-    >
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
-    </div>
-
-    <h3>Live demo</h3>
-    <>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Modals:</Card.Header>
+    <Card.Body>
+    <Card.Title>Live demo</Card.Title>
       <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
@@ -83,10 +63,12 @@ function ModalsForm() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
 
-    <h3>Static backdrop</h3>
-    <>
+      <br/>
+
+<br/>
+    <Card.Title>Static backdrop</Card.Title>
+ 
       <Button variant="primary" onClick={handleShows}>
         Launch static backdrop modal
       </Button>
@@ -111,10 +93,12 @@ function ModalsForm() {
           <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
-    </>
+ 
+      <br/>
 
-    <h3>Without Animation</h3>
-    <>
+<br/>
+    <Card.Title>Without Animation</Card.Title>
+
       <Button variant="primary" onClick={handleShowss}>
         Launch demo modal
       </Button>
@@ -133,15 +117,21 @@ function ModalsForm() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
 
-    <h3>Vertically centered</h3>
+      <br/>
+
+<br/>
+    <Card.Title>Vertically centered</Card.Title>
     <VerticallyCentered/>
+    <br/>
 
-    <h3>Usingthe grid</h3>
+<br/>
+    <Card.Title>Usingthe grid</Card.Title>
     <UsingGrid/>
+    <br/>
 
-    <h3>Focus on specific element</h3>
+<br/>
+    <Card.Title>Focus on specific element</Card.Title>
     <>
       <Button variant="primary" onClick={handleShowon}>
         Launch demo modal
@@ -180,8 +170,10 @@ function ModalsForm() {
         </Modal.Footer>
       </Modal>
     </>
+    <br/>
 
-    <h3>Optional Sizes</h3>
+<br/>
+    <Card.Title>Optional Sizes</Card.Title>
     <>
     <Button onClick={() => setSmShow(true)} className="me-2">
         Small modal
@@ -214,8 +206,10 @@ function ModalsForm() {
         <Modal.Body>...</Modal.Body>
       </Modal>
       </>
+      <br/>
 
-    <h3>Fullscreen Modal</h3>
+<br/>
+    <Card.Title>Fullscreen Modal</Card.Title>
     <>
       {values.map((v, idx) => (
         <Button key={idx} className="me-2 mb-2" onClick={() => handleShowop(v)}>
@@ -230,8 +224,10 @@ function ModalsForm() {
         <Modal.Body>Modal body content</Modal.Body>
       </Modal>
     </>
+    <br/>
 
-    <h3>Sizing modals using custom CSS</h3>
+<br/>
+    <Card.Title>Sizing modals using custom CSS</Card.Title>
     <>
     <Button variant="primary" onClick={() => setShowcss(true)}>
         Custom Width Modal
@@ -261,7 +257,31 @@ function ModalsForm() {
         </Modal.Body>
       </Modal>
     </>
-    </>
+    <br/>
+
+    <br/>
+    <Card.Title>Static Markup</Card.Title>
+    <div
+      className="modal show"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Modal body text goes here.</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
+    </Card.Body>
+    </Card>
   
   
   );

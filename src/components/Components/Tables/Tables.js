@@ -1,10 +1,13 @@
 import Table from 'react-bootstrap/Table';
+import css from './Tables.module.css'
+import { Card } from 'react-bootstrap';
 
 function Tables() {
   return (
-    <>
-    <h2>Tables</h2>
-    <h3>Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Tables</Card.Header>
+    <Card.Body>
+    <Card.Title>Example</Card.Title>
     <>
     <Table striped bordered hover>
       <thead>
@@ -36,8 +39,10 @@ function Tables() {
       </tbody>
     </Table>
     </>
+    <br/>
 
-    <h2>Small Table</h2>
+<br/>
+    <Card.Title>Small Table</Card.Title>
     <>
     <Table striped bordered hover size="sm">
       <thead>
@@ -69,8 +74,10 @@ function Tables() {
       </tbody>
     </Table>
     </>
+    <br/>
 
-    <h2>Dark Table</h2>
+<br/>
+    <Card.Title>Dark Table</Card.Title>
     <>
     <Table striped bordered hover variant="dark">
       <thead>
@@ -102,8 +109,10 @@ function Tables() {
       </tbody>
     </Table>
     </>
+    <br/>
 
-    <h2>Striped rows</h2>
+<br/>
+    <Card.Title>Striped rows</Card.Title>
     <>
     <Table striped>
       <thead>
@@ -135,8 +144,10 @@ function Tables() {
       </tbody>
     </Table>
     </>
+    <br/>
 
-    <h2>Striped columns</h2>
+<br/>
+    <Card.Title>Striped columns</Card.Title>
     <>
     <Table striped="columns">
       <thead>
@@ -168,8 +179,10 @@ function Tables() {
       </tbody>
     </Table>
     </>
+    <br/>
 
-    <h2>Responsive</h2>
+<br/>
+    <Card.Title>Responsive</Card.Title>
     <>
     <Table responsive>
       <thead>
@@ -202,8 +215,10 @@ function Tables() {
       </tbody>
     </Table>
     </>
+    <br/>
 
-    <h2>Breakpoint specific</h2>
+<br/>
+    <Card.Title>Breakpoint specific</Card.Title>
     <div>
       <Table responsive="sm">
         <thead>
@@ -374,7 +389,8 @@ function Tables() {
         </tbody>
       </Table>
     </div>
-    </>
+    </Card.Body>
+    </Card>
     
   );
 }

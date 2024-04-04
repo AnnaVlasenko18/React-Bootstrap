@@ -1,6 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Card } from 'react-bootstrap';
 import { useState } from 'react';
+import css from './Carousels.module.css'
 
 function Carousels() {
     const [index, setIndex] = useState(0);
@@ -9,9 +10,10 @@ function Carousels() {
     setIndex(selectedIndex);
   };
   return (
-    <>
-    <h2>Carousels</h2>
-    <h3>Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Carousels</Card.Header>
+    <Card.Body>
+    <Card.Title>Example</Card.Title>
     <Carousel>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="Card image" />
@@ -37,74 +39,106 @@ function Carousels() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+<br/>
 
-    <h3>Controlled</h3>
+<br/>
+    <Card.Title>Controlled</Card.Title>
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="Card image" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <br/>
+
+          <br/>
+    <Card.Title>First slide label</Card.Title>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="Card image" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+          <br/>
+
+          <br/>
+  <Card.Title>Second slide label</Card.Title>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="Card image" />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <br/>
+
+          <br/>
+    <Card.Title>Third slide label</Card.Title>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <br/>
 
-    <h3>Crossfade</h3>
+    <br/>
+    <Card.Title>Crossfade</Card.Title>
     <Carousel fade>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+
+          <br/>
+
+          <br/>
+          <Card.Title>First slide label</Card.Title>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+          <br/>
+
+          <br/>
+          <Card.Title>Second slide label</Card.Title>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <br/>
+
+          <br/>
+          <Card.Title>Third slide label</Card.Title>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+<br/>
 
-    <h3>No transition animation</h3>
+<br/>
+    <Card.Title>No transition animation</Card.Title>
     <Carousel slide={false}>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <br/>
+
+          <br/>
+          <Card.Title>First slide label</Card.Title>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+        <br/>
+
+<br/>
+
+          <Card.Title>Second slide label</Card.Title>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -118,20 +152,28 @@ function Carousels() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <br/>
 
-    <h3>Individual Item Intervals</h3>
+<br/>
+    <Card.Title>Individual Item Intervals</Card.Title>
     <Carousel>
       <Carousel.Item interval={1000}>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+        <br/>
+
+<br/>
+          <Card.Title>First slide label</Card.Title>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
       <Card.Img variant="top" src="https://via.placeholder.com/416x160" alt="First slide" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+        <br/>
+
+<br/>         
+          <Card.Title>Second slide label</Card.Title>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -145,8 +187,10 @@ function Carousels() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <br/>
 
-    <h3>Dark variant</h3>
+<br/>
+    <Card.Title>Dark variant</Card.Title>
     <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <img
@@ -184,7 +228,8 @@ function Carousels() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    </>
+    </Card.Body>
+    </Card>
     
   );
 }

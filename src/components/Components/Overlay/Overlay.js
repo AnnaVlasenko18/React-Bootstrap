@@ -1,9 +1,10 @@
 import { useState, useRef } from 'react';
-import { Image, OverlayTrigger, Popover, Tooltip } from 'react-bootstrap';
+import { Card, Image, OverlayTrigger, Popover, Tooltip } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Overlay from 'react-bootstrap/Overlay';
 import Popovers from './Popovers';
 import Dynamically from './Dynamically';
+import css from './Overlay.module.css'
 
 function Overlays() {
   const [showon, setShowon] = useState(false);
@@ -34,9 +35,10 @@ function Overlays() {
   };
 
   return (
-    <>
-    <h2>Overlays:</h2>
-    <h3>Creating an Overlay</h3>
+    <Card border="dark" className={css.container} >
+    <Card.Header className={css.title}>Overlays:</Card.Header>
+    <Card.Body>
+    <Card.Title>Creating an Overlay</Card.Title>
     <>
     <Button variant="danger" ref={targeton} onClick={() => setShowon(!showon)}>
         Click me to see
@@ -66,8 +68,10 @@ function Overlays() {
         )}
        </Overlay>
     </>
+    <br/>
 
-    <h3>OverlayTrigger</h3>
+    <br/>
+    <Card.Title>OverlayTrigger</Card.Title>
     <>
     <OverlayTrigger
       placement="right"
@@ -77,8 +81,10 @@ function Overlays() {
       <Button variant="success">Hover me to see</Button>
     </OverlayTrigger>
     </>
+    <br/>
 
-    <h3>Customizing trigger behavior</h3>
+    <br/>
+    <Card.Title>Customizing trigger behavior</Card.Title>
     <>
     <OverlayTrigger
       placement="bottom"
@@ -100,8 +106,10 @@ function Overlays() {
       )}
     </OverlayTrigger>
     </>
+    <br/>
 
-    <h3>Tooltips</h3>
+    <br/>
+    <Card.Title>Tooltips</Card.Title>
     <> 
     <p>Tight pants next level keffiyeh{' '}
       <Link title="Default title" id="t-1">
@@ -124,20 +132,22 @@ function Overlays() {
       </Link>{' '}
       freegan cred raw denim single-origin coffee viral.
     </p>
-
-    <>
-      <Button ref={targets} onClick={() => setShows(!shows)}>
+<br/>
+  <>
+      <Button ref={targets} onClick={() => setShows(!shows)} style={{ marginRight: '8px', marginBottom: '16px' }}>
         Click me!
       </Button>
-      <Overlay target={targets.current} show={shows} placement="right">
+
+      <Overlay target={targets.current} show={shows} placement="right" >
         {(props) => (
-          <Tooltip id="overlay-example" {...props}>
+          <Tooltip id="overlay-example" {...props} >
             My Tooltip
           </Tooltip>
         )}
       </Overlay>
-    </>
 
+    </>
+<br/>
     <>
       {['top', 'right', 'bottom', 'left'].map((placement) => (
         <OverlayTrigger
@@ -149,14 +159,19 @@ function Overlays() {
             </Tooltip>
           }
         >
-          <Button variant="secondary">Tooltip on {placement}</Button>
+          <Button variant="secondary" style={{ marginRight: '8px', marginBottom: '16px' }}>Tooltip on {placement}</Button>
         </OverlayTrigger>
       ))}
     </>
     </>
+    <br/>
 
-    <h3>Popovers</h3>
+    <br/>
+    <Card.Title>Popovers</Card.Title>
     <Popovers/>
+    <br/>
+
+    <br/>
     <>
       {['top', 'right', 'bottom', 'left'].map((placement) => (
         <OverlayTrigger
@@ -172,12 +187,14 @@ function Overlays() {
             </Popover>
           }
         >
-          <Button variant="secondary">Popover on {placement}</Button>
+          <Button variant="secondary"style={{ marginRight: '8px', marginBottom: '16px' }}>Popover on {placement}</Button>
         </OverlayTrigger>
       ))}
     </>
+    <br/>
 
-    <h3>Disabled elements</h3>
+    <br/>
+    <Card.Title>Disabled elements</Card.Title>
     <>
     <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Tooltip!</Tooltip>}>
       <span className="d-inline-block">
@@ -187,8 +204,10 @@ function Overlays() {
       </span>
     </OverlayTrigger>
     </>
+    <br/>
 
-    <h3>Changing containers</h3>
+    <br/>
+    <Card.Title>Changing containers</Card.Title>
     <>
     <div ref={ref}>
       <Button onClick={handleClick}>Holy guacamole!</Button>
@@ -209,10 +228,13 @@ function Overlays() {
       </Overlay>
     </div>
     </>
+    <br/>
 
-    <h3>Updating position dynamically</h3>
+    <br/>
+    <Card.Title>Updating position dynamically</Card.Title>
     <Dynamically/>
-    </>
+    </Card.Body>
+    </Card>
   );
 }
 

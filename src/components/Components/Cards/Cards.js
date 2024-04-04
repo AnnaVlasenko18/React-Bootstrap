@@ -10,10 +10,8 @@ function Cards() {
     <Card.Header className={css.title}>Cards</Card.Header>
     <Card.Body>
       <div  className={css.wraper}>
+        <div>
     <Card.Title>Basic Example</Card.Title>
-    <br/>
-
-<br/>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://via.placeholder.com/100x100" alt="Card image" />
       <Card.Body>
@@ -25,13 +23,12 @@ function Cards() {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+    </div>
 <br/>
 
 <br/>
+<div>
 <Card.Title>Kitchen Sink</Card.Title>
-<br/>
-
-<br/>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://via.placeholder.com/100x100" alt="Card image" />
       <Card.Body>
@@ -52,17 +49,12 @@ function Cards() {
       </Card.Body>
     </Card>
     </div>
+    </div>
     <br/>
 
 <br/>
-    <Card.Title>Content types</Card.Title>
-    <Card.Title >Body</Card.Title>
-    <Card>
-      <Card.Body>This is some text within a card body.</Card.Body>
-    </Card>
-    <br/>
-
-<br/>
+<div  className={css.wraper}>
+  <div>
     <Card.Title>Title, text, and links</Card.Title>
     <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -76,9 +68,11 @@ function Cards() {
         <Card.Link href="home">Another Link</Card.Link>
       </Card.Body>
     </Card>
+    </div>
     <br/>
 
 <br/>
+<div>
     <Card.Title>List Groups</Card.Title>
     <Card style={{ width: '18rem' }}>
       <ListGroup variant="flush">
@@ -87,6 +81,17 @@ function Cards() {
         <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
       </ListGroup>
     </Card>
+    </div>
+    </div>
+    <br/>
+
+    <br/>
+    <Card.Title>Content types</Card.Title>
+    <Card.Title >Body</Card.Title>
+    <Card>
+      <Card.Body>This is some text within a card body.</Card.Body>
+    </Card>
+ 
     <br/>
 
 <br/>
@@ -101,7 +106,9 @@ function Cards() {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+    <br/>
 
+    <br/>
     <Card>
       <Card.Header>Quote</Card.Header>
       <Card.Body>
@@ -117,7 +124,9 @@ function Cards() {
         </blockquote>
       </Card.Body>
     </Card>
+    <br/>
 
+    <br/>
     <Card className="text-center">
       <Card.Header>Featured</Card.Header>
       <Card.Body>
@@ -196,7 +205,9 @@ function Cards() {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+    <br/>
 
+    <br/>
     <Card>
       <Card.Header>
         <Nav variant="pills" defaultActiveKey="#first">
@@ -226,7 +237,7 @@ function Cards() {
 <br/>
     <Card.Title>Card Styles</Card.Title>
     <Card.Title>Background Color</Card.Title>
-    <>
+    <div className={css.wraperCards}>
       {[
         'Primary',
         'Secondary',
@@ -242,7 +253,7 @@ function Cards() {
           key={variant}
           text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
           style={{ width: '18rem' }}
-          className="mb-2"
+          className={`mb-2 ${css.card}`}
         >
           <Card.Header>Header</Card.Header>
           <Card.Body>
@@ -254,13 +265,14 @@ function Cards() {
           </Card.Body>
         </Card>
       ))}
-    </>
+    </div>
     <br/>
 
 <br/>
+
     <Card.Title>Border Color</Card.Title>
-    <Card>
-      <Card border="primary" style={{ width: '18rem' }}>
+    <div  className={css.wraperCardsBorder}>
+      <Card border="primary" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Primary Card Title</Card.Title>
@@ -270,9 +282,9 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
 
-      <Card border="secondary" style={{ width: '18rem' }}>
+
+      <Card border="secondary" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Secondary Card Title</Card.Title>
@@ -282,9 +294,9 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
 
-      <Card border="success" style={{ width: '18rem' }}>
+
+      <Card border="success" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Success Card Title</Card.Title>
@@ -294,9 +306,8 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
 
-      <Card border="danger" style={{ width: '18rem' }}>
+      <Card border="danger" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Danger Card Title</Card.Title>
@@ -306,9 +317,8 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
 
-      <Card border="warning" style={{ width: '18rem' }}>
+      <Card border="warning" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Warning Card Title</Card.Title>
@@ -318,9 +328,8 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
 
-      <Card border="info" style={{ width: '18rem' }}>
+      <Card border="info" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Info Card Title</Card.Title>
@@ -330,9 +339,8 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
 
-      <Card border="dark" style={{ width: '18rem' }}>
+      <Card border="dark" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Dark Card Title</Card.Title>
@@ -341,10 +349,10 @@ function Cards() {
             bulk of the card's content.
           </Card.Text>
         </Card.Body>
+   
       </Card>
-      <br />
 
-      <Card border="light" style={{ width: '18rem' }}>
+      <Card border="light" style={{ width: '18rem' }} className={`mb-2 ${css.card}`}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
           <Card.Title>Light Card Title</Card.Title>
@@ -354,8 +362,7 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <br />
-    </Card>
+    </div>
     <br/>
 
 <br/>

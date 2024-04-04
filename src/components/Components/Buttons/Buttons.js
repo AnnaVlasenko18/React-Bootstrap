@@ -4,7 +4,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import css from './Buttons.module.css'
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 
 function Buttons() {
   const [isLoading, setLoading] = useState(false);

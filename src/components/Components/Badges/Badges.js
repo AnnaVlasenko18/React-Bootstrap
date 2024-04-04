@@ -2,7 +2,7 @@ import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
 import css from './Badges.module.css'
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 
 function Badges() {
   return (

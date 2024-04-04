@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import css from './Buttons.module.css'
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 function Buttons() {
   const [isLoading, setLoading] = useState(false);
@@ -35,39 +37,53 @@ function Buttons() {
   const handleChange = (val) => setValue(val);
   
   return (
-    <>
-        <h2>Buttons</h2>
-        <>
-         <Button variant="primary">Primary</Button>{' '}
-         <Button variant="secondary">Secondary</Button>{' '}
-         <Button variant="success">Success</Button>{' '}
-         <Button variant="warning">Warning</Button>{' '}
-         <Button variant="danger">Danger</Button>{' '}
-         <Button variant="info">Info</Button>{' '}
-         <Button variant="light">Light</Button>{' '}
-         <Button variant="dark">Dark</Button>
-         <Button variant="link">Link</Button>
+    <Card border="dark" className={css.container}>
+        <Card.Header className={css.title}>Buttons</Card.Header>
+        <Card.Body>
+        <Card.Title>Examples</Card.Title>
+        <>      
+        <div style={{ marginBottom: '8px' }}>
+      <Button variant="primary">Primary</Button>{' '}
+      <Button variant="secondary">Secondary</Button>{' '}
+      <Button variant="success">Success</Button>{' '}
+      <Button variant="warning">Warning</Button>{' '}
+      <Button variant="danger">Danger</Button>{' '}
+      </div>
+      <Button variant="info">Info</Button>{' '}
+      <Button variant="light">Light</Button>{' '}
+      <Button variant="dark">Dark</Button>
+      <Button variant="link">Link</Button>
+    </>
+        <br/>
 
-         <h3>Outline buttons</h3>
+     <br/>
+         <Card.Title>Outline buttons</Card.Title>
          <>
+         <div style={{ marginBottom: '8px' }}>
           <Button variant="outline-primary">Primary</Button>{' '}
           <Button variant="outline-secondary">Secondary</Button>{' '}
           <Button variant="outline-success">Success</Button>{' '}
           <Button variant="outline-warning">Warning</Button>{' '}
           <Button variant="outline-danger">Danger</Button>{' '}
+          </div>
           <Button variant="outline-info">Info</Button>{' '}
           <Button variant="outline-light">Light</Button>{' '}
           <Button variant="outline-dark">Dark</Button>
          </>      
-         
-         <h3>Button tags</h3>
+         <br/>
+
+         <br/>
+         <Card.Title>Button tags</Card.Title>
          <>
            <Button href="#">Link</Button> <Button type="submit">Button</Button>{' '}
            <Button as="input" type="button" value="Input" />{' '}
            <Button as="input" type="submit" value="Submit" />{' '}
            <Button as="input" type="reset" value="Reset" />
          </>
-         <h3>Sizes</h3>
+<br/>
+
+         <br/>
+         <Card.Title>Sizes</Card.Title>
          <>
            <div className="mb-2">
              <Button variant="primary" size="lg">
@@ -86,7 +102,11 @@ function Buttons() {
               </Button>
             </div>
           </>
-         <h3>Block buttons</h3>
+          <br/>
+          <br/>
+
+          <br/>
+         <Card.Title>Block buttons</Card.Title>
          <div className="d-grid gap-2">
            <Button variant="primary" size="lg">
              Block level button
@@ -95,7 +115,10 @@ function Buttons() {
              Block level button
            </Button>
          </div>
-         <h3>Active state</h3>
+         <br/>
+
+         <br/>
+         <Card.Title>Active state</Card.Title>
          <>
            <Button variant="primary" size="lg" active>
              Primary button
@@ -103,8 +126,11 @@ function Buttons() {
            <Button variant="secondary" size="lg" active>
              Button
            </Button>
-         </>           
-         <h3>Disabled state</h3>
+         </>  
+         <br/>
+
+         <br/>       
+         <Card.Title>Disabled state</Card.Title>
          <>
            <Button variant="primary" size="lg" disabled>
              Primary button
@@ -115,8 +141,11 @@ function Buttons() {
            <Button href="#" variant="secondary" size="lg" disabled>
              Link
            </Button>
-         </>     
-         <h3>Button loading state</h3>
+         </>   
+         <br/>  
+
+         <br/>
+         <Card.Title>Button loading state</Card.Title>
               <Button
                 variant="primary"
                 disabled={isLoading}
@@ -124,7 +153,10 @@ function Buttons() {
               >
             {isLoading ? 'Loading…' : 'Click to load'}
               </Button>
-         <h3>Checkbox / Radio</h3>
+              <br/>
+
+              <br/>
+         <Card.Title>Checkbox / Radio</Card.Title>
          <>
       <ButtonGroup className="mb-2">
         <ToggleButton
@@ -185,7 +217,10 @@ function Buttons() {
         ))}
       </ButtonGroup>
     </>
-         <h3>Uncontrolled</h3>
+    <br/>
+
+    <br/>
+         <Card.Title>Uncontrolled</Card.Title>
          <>
       <ToggleButtonGroup type="checkbox" defaultValue={[1, 3]} className="mb-2">
         <ToggleButton id="tbg-check-1" value={1}>
@@ -211,7 +246,10 @@ function Buttons() {
         </ToggleButton>
       </ToggleButtonGroup>
     </>
-         <h3>Controlled</h3>
+    <br/>
+
+    <br/>
+         <Card.Title>Controlled</Card.Title>
          <ToggleButtonGroup type="checkbox" value={value} onChange={handleChange}>
       <ToggleButton id="tbg-btn-1" value={1}>
         Option 1
@@ -224,8 +262,9 @@ function Buttons() {
       </ToggleButton>
     </ToggleButtonGroup>
          
-        </>
-    </>
+
+    </Card.Body>
+    </Card>
 
   );
 }

@@ -2,12 +2,18 @@ import { CardGroup, Col, Nav, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import css from './Cards.module.css'
 
 function Cards() {
   return (
-    <>
-    <h2>Cards</h2>
-    <h3>Basic Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Cards</Card.Header>
+    <Card.Body>
+      <div  className={css.wraper}>
+    <Card.Title>Basic Example</Card.Title>
+    <br/>
+
+<br/>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://via.placeholder.com/100x100" alt="Card image" />
       <Card.Body>
@@ -19,36 +25,13 @@ function Cards() {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+<br/>
 
-    <h3>Content types</h3>
-    <h4>Body</h4>
-    <Card>
-      <Card.Body>This is some text within a card body.</Card.Body>
-    </Card>
-    <h4>Title, text, and links</h4>
-    <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Card.Link href="home">Card Link</Card.Link>
-        <Card.Link href="home">Another Link</Card.Link>
-      </Card.Body>
-    </Card>
+<br/>
+<Card.Title>Kitchen Sink</Card.Title>
+<br/>
 
-    <h4>List Groups</h4>
-    <Card style={{ width: '18rem' }}>
-      <ListGroup variant="flush">
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-    </Card>
-
-    <h4>Kitchen Sink</h4>
+<br/>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://via.placeholder.com/100x100" alt="Card image" />
       <Card.Body>
@@ -68,8 +51,46 @@ function Cards() {
         <Card.Link href="home">Another Link</Card.Link>
       </Card.Body>
     </Card>
+    </div>
+    <br/>
 
-    <h4>Header and Footer</h4>
+<br/>
+    <Card.Title>Content types</Card.Title>
+    <Card.Title >Body</Card.Title>
+    <Card>
+      <Card.Body>This is some text within a card body.</Card.Body>
+    </Card>
+    <br/>
+
+<br/>
+    <Card.Title>Title, text, and links</Card.Title>
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Card.Link href="home">Card Link</Card.Link>
+        <Card.Link href="home">Another Link</Card.Link>
+      </Card.Body>
+    </Card>
+    <br/>
+
+<br/>
+    <Card.Title>List Groups</Card.Title>
+    <Card style={{ width: '18rem' }}>
+      <ListGroup variant="flush">
+        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+      </ListGroup>
+    </Card>
+    <br/>
+
+<br/>
+    <Card.Title>Header and Footer</Card.Title>
     <Card>
       <Card.Header>Featured</Card.Header>
       <Card.Body>
@@ -108,9 +129,11 @@ function Cards() {
       </Card.Body>
       <Card.Footer className="text-muted">2 days ago</Card.Footer>
     </Card>
+    <br/>
 
-    <h3>Images</h3>
-    <h4>Image caps</h4>
+<br/>
+    <Card.Title>Images</Card.Title>
+    <Card.Title>Image caps</Card.Title>
     <Card>
         <Card.Img variant="top" src="https://via.placeholder.com/857x180" />
         <Card.Body>
@@ -130,8 +153,10 @@ function Cards() {
         </Card.Body>
         <Card.Img variant="bottom" src="https://via.placeholder.com/857x180" />
       </Card>
+      <br/>
 
-    <h4>Image Overlays</h4>
+     <br/>
+    <Card.Title>Image Overlays</Card.Title>
     <Card className="bg-dark text-white">
       <Card.Img src="https://via.placeholder.com/857x270" alt="Card image" />
       <Card.ImgOverlay>
@@ -143,8 +168,10 @@ function Cards() {
         <Card.Text>Last updated 3 mins ago</Card.Text>
       </Card.ImgOverlay>
     </Card>
+    <br/>
 
-    <h3>Navigation</h3>
+<br/>
+    <Card.Title>Navigation</Card.Title>
     <Card>
       <Card.Header>
         <Nav variant="tabs" defaultActiveKey="#first">
@@ -194,9 +221,11 @@ function Cards() {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+    <br/>
 
-    <h3>Card Styles</h3>
-    <h4>Background Color</h4>
+<br/>
+    <Card.Title>Card Styles</Card.Title>
+    <Card.Title>Background Color</Card.Title>
     <>
       {[
         'Primary',
@@ -226,9 +255,11 @@ function Cards() {
         </Card>
       ))}
     </>
+    <br/>
 
-    <h4>Border Color</h4>
-    <>
+<br/>
+    <Card.Title>Border Color</Card.Title>
+    <Card>
       <Card border="primary" style={{ width: '18rem' }}>
         <Card.Header>Header</Card.Header>
         <Card.Body>
@@ -324,9 +355,12 @@ function Cards() {
         </Card.Body>
       </Card>
       <br />
-    </>
-    <h3>Card layout</h3>
-    <h4>Card Groups</h4>
+    </Card>
+    <br/>
+
+<br/>
+    <Card.Title>Card layout</Card.Title>
+    <Card.Title>Card Groups</Card.Title>
     <CardGroup>
       <Card>
         <Card.Img variant="top" src="https://via.placeholder.com/285x160" alt="Card image" />
@@ -369,8 +403,10 @@ function Cards() {
         </Card.Footer>
       </Card>
     </CardGroup>
+    <br/>
 
-    <h4>Grid cards</h4>
+<br/>
+    <Card.Title>Grid cards</Card.Title>
     <Row xs={1} md={2} className="g-4">
       {Array.from({ length: 4 }).map((_, idx) => (
         <Col key={idx}>
@@ -388,7 +424,8 @@ function Cards() {
         </Col>
       ))}
     </Row>
-    </>
+    </Card.Body>
+    </Card>
 
   );
 }

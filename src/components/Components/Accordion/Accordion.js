@@ -3,7 +3,7 @@ import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import { useContext } from 'react';
 import AccordionContext from 'react-bootstrap/AccordionContext';
-
+import css from './Accordion.module.css'
 
 function CustomToggle({ children, eventKey }) {
     const decoratedOnClick = useAccordionButton(eventKey, () =>
@@ -48,9 +48,10 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 function Accordions() {
 
   return (
-    <>
-    <h2>Accordion</h2>
-    <h3>Basic Example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Accordion</Card.Header>
+    <Card.Body>
+    <Card.Title>Basic Example</Card.Title>
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -77,8 +78,9 @@ function Accordions() {
         </Accordion.Body>
       </Accordion.Item>    
     </Accordion>
+    <br/>
 
-    <h3>Fully Collapsed State</h3>
+    <Card.Title>Fully Collapsed State</Card.Title>
     <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -106,7 +108,8 @@ function Accordions() {
       </Accordion.Item>
     </Accordion>
 
-    <h3>Flush</h3>
+<br/>
+    <Card.Title>Flush</Card.Title>
     <Accordion defaultActiveKey="0" flush>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -134,7 +137,8 @@ function Accordions() {
       </Accordion.Item>
     </Accordion>
 
-    <h3>Always open</h3>
+<br/>
+    <Card.Title>Always open</Card.Title>
     <Accordion defaultActiveKey={['0']} alwaysOpen>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -162,8 +166,8 @@ function Accordions() {
       </Accordion.Item>
     </Accordion>
 
-    <h2>Custom Accordions</h2>
-    <h3>Custom Toggle</h3>
+   <br/>
+    <Card.Title>Custom Toggle</Card.Title>
     <Accordion defaultActiveKey="0">
       <Card>
         <Card.Header>
@@ -183,7 +187,8 @@ function Accordions() {
       </Card>
     </Accordion>
 
-    <h3>Custom Toggle with Expansion Awareness</h3>
+<br/>
+    <Card.Title>Custom Toggle with Expansion Awareness</Card.Title>
     <Accordion defaultActiveKey="0">
       <Card>
         <Card.Header>
@@ -202,7 +207,8 @@ function Accordions() {
         </Accordion.Collapse>
       </Card>
     </Accordion>
-    </>
+    </Card.Body>
+    </Card>
     
   );
 }

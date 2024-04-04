@@ -1,11 +1,15 @@
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
+import css from './Badges.module.css'
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 function Badges() {
   return (
-    <div>
-      <h1>Badges</h1>
+    <Card border="dark" className={css.container}>
+      <Card.Header className={css.title}>Badges</Card.Header>
+      <Card.Body>
+      <Card.Title>Examples</Card.Title>
       <h2>
         Example heading <Badge bg="secondary">New</Badge>
       </h2>
@@ -22,27 +26,48 @@ function Badges() {
         Example heading <Badge bg="secondary">New</Badge>
       </h6>
 
+<br/>
       <Button variant="primary">
       Profile <Badge bg="secondary">9</Badge>
       <span className="visually-hidden">unread messages</span>
     </Button>
+<br/>
 
-    <h3>Contextual variations</h3>
-    <Stack direction="horizontal" gap={2}>
+    <br/>
+    <Card.Title>Contextual variations</Card.Title>
+<Container>
+  <Row>
+    <Col xs={3}>
       <Badge bg="primary">Primary</Badge>
+    </Col>
+    <Col xs={3}>
       <Badge bg="secondary">Secondary</Badge>
+    </Col>
+    <Col xs={3}>
       <Badge bg="success">Success</Badge>
+    </Col>
+    <Col xs={3}>
       <Badge bg="danger">Danger</Badge>
-      <Badge bg="warning" text="dark">
-        Warning
-      </Badge>
+    </Col>
+  </Row>
+  <Row>
+    <Col xs={3}>
+      <Badge bg="warning" text="dark">Warning</Badge>
+    </Col>
+    <Col xs={3}>
       <Badge bg="info">Info</Badge>
-      <Badge bg="light" text="dark">
-        Light
-      </Badge>
+    </Col>
+    <Col xs={3}>
+      <Badge bg="light" text="dark">Light</Badge>
+    </Col>
+    <Col xs={3}>
       <Badge bg="dark">Dark</Badge>
-    </Stack>
-    </div>
+    </Col>
+  </Row>
+</Container>
+
+    </Card.Body>
+    </Card>
   );
 }
 

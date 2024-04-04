@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card, Fade } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
+import css from './Transitions.module.css'
 
 function Transitions() {
   const [open, setOpen] = useState(false);
@@ -9,10 +10,10 @@ function Transitions() {
   const [openB, setOpenB] = useState(false);
 
   return (
-    <>
-    <h2>Transitions:</h2>
-    <h3>Basic Example</h3>
-    <>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Transitions:</Card.Header>
+    <Card.Body>
+    <Card.Title>Basic Example</Card.Title>
       <Button
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
@@ -27,10 +28,9 @@ function Transitions() {
           labore wes anderson cred nesciunt sapiente ea proident.
         </div>
       </Collapse>
-    </>
-    
-    <h2>Horizontal</h2>
-    <>
+    <br/>
+    <br/>
+    <Card.Title>Horizontal</Card.Title>
       <Button
         onClick={() => setOpenA(!openA)}
         aria-controls="example-collapse-text"
@@ -50,10 +50,8 @@ function Transitions() {
           </div>
         </Collapse>
       </div>
-    </>
 
-    <h2>Fade</h2>
-    <>
+    <Card.Title>Fade</Card.Title>
       <Button
         onClick={() => setOpenB(!openB)}
         aria-controls="example-fade-text"
@@ -68,8 +66,8 @@ function Transitions() {
           labore wes anderson cred nesciunt sapiente ea proident.
         </div>
       </Fade>
-    </>
-    </>
+    </Card.Body>
+    </Card>
     
   );
 }

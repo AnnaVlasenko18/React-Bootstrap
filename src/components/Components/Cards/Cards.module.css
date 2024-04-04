@@ -1,0 +1,15 @@
+.container{
+    width: calc((100% - 32px) / 2);
+ }
+
+ .wraper{
+  display: flex;
+  flex-wrap: nowrap;
+ }
+ 
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    margin: 0;
+} 

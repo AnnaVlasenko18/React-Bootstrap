@@ -1,0 +1,14 @@
+.container{
+    width: calc((100% - 48px) / 3);
+    /* float: left; 
+    margin-right: 16px; 
+    box-sizing: border-box; 
+    border: 1px solid black;  */
+ }
+
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    margin: 0;
+} 

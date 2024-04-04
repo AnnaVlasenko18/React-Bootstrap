@@ -26,7 +26,6 @@ import Toasts from '../../components/Components/Toasts/Toasts.js'
 function ComponentsPage() {
     return (
      <>
-     <h1>Components</h1>
      <Accordions/>
      <Alerts/>
      <Badges/>

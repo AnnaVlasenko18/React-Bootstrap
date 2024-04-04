@@ -5,19 +5,24 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import css from './ButtonGroup.module.css'
+import { Card } from 'react-bootstrap';
 
 function ButtonsGroup() {
   return (
-    <>
-    <h2>Button Group</h2>
-    <h3>Basic example</h3>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Button Group</Card.Header>
+    <Card.Body>
+    <Card.Title>Basic example</Card.Title>
     <ButtonGroup aria-label="Basic example">
       <Button variant="secondary">Left</Button>
       <Button variant="secondary">Middle</Button>
       <Button variant="secondary">Right</Button>
     </ButtonGroup>
-
-    <h3>Button toolbar</h3>
+    <br/>
+    
+<br/>
+    <Card.Title>Button toolbar</Card.Title>
     <ButtonToolbar aria-label="Toolbar with button groups">
       <ButtonGroup className="me-2" aria-label="First group">
         <Button>1</Button> <Button>2</Button> <Button>3</Button>{' '}
@@ -70,7 +75,8 @@ function ButtonsGroup() {
         </InputGroup>
       </ButtonToolbar>
     
-    <h3>Sizing</h3>
+  <br/>
+    <Card.Title>Sizing</Card.Title>
     <ButtonGroup size="lg" className="mb-2">
         <Button>Left</Button>
         <Button>Middle</Button>
@@ -88,7 +94,10 @@ function ButtonsGroup() {
         <Button>Middle</Button>
         <Button>Right</Button>
       </ButtonGroup>
-    <h3>Nesting</h3>
+      <br/>
+
+      <br/>
+    <Card.Title>Nesting</Card.Title>
     <ButtonGroup>
       <Button>1</Button>
       <Button>2</Button>
@@ -98,7 +107,10 @@ function ButtonsGroup() {
         <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
       </DropdownButton>
     </ButtonGroup>
-    <h3>Vertical variation</h3>
+<br/>
+
+    <br/>
+    <Card.Title>Vertical variation</Card.Title>
     <ButtonGroup vertical>
       <Button>Button</Button>
       <Button>Button</Button>
@@ -133,7 +145,8 @@ function ButtonsGroup() {
         <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
       </DropdownButton>
     </ButtonGroup>
-    </>
+    </Card.Body>
+    </Card>
 
   );
 }

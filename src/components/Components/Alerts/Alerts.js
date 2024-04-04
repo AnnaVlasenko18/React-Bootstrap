@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import css from './Alerts.module.css'
+import { Card } from 'react-bootstrap';
 
 function Alerts() {
     const [show, setShow] = useState(true);
   return (
-    <>
-    <h2>Alerts</h2>
+    <Card border="dark" className={css.container}>
+    <Card.Header className={css.title}>Alerts</Card.Header>
+    <Card.Body>
+    <Card.Title>Examples</Card.Title>
       {[
         'primary',
         'secondary',
@@ -22,7 +26,8 @@ function Alerts() {
         </Alert>
       ))}
 
-      <h3>Links</h3>
+<br/>
+      <Card.Title>Links</Card.Title>
       {[
         'primary',
         'secondary',
@@ -40,7 +45,8 @@ function Alerts() {
         </Alert>
       ))}
 
-      <h2>Additional content</h2>
+<br/>
+      <Card.Title>Additional content</Card.Title>
       <Alert variant="success">
       <Alert.Heading>Hey, nice to see you</Alert.Heading>
       <p>
@@ -55,7 +61,8 @@ function Alerts() {
       </p>
     </Alert>
 
-    <h3>Dismissing</h3>
+<br/>
+    <Card.Title>Dismissing</Card.Title>
     <Alert show={show} variant="success">
         <Alert.Heading>My Alert</Alert.Heading>
         <p>
@@ -72,7 +79,8 @@ function Alerts() {
       </Alert>
 
       {!show && <Button onClick={() => setShow(true)}>Show Alert</Button>}
-    </>
+      </Card.Body>
+    </Card>
   );
 }
 
